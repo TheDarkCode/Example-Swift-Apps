@@ -1,6 +1,6 @@
 //
 //  SoundEffect.swift
-//  advanced-game-exercise
+//  Sample class for quickly incorporating sound effects.
 //
 //  Created by Mark Hamilton on 2/16/16.
 //  Copyright © 2016 dryverless. All rights reserved.
