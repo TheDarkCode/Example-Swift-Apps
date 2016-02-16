@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Game-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Game" customModule="advanced_game_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the-white-house" translatesAutoresizingMaskIntoConstraints="NO" id="NXc-Xa-g8J">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donald-trump-standing" translatesAutoresizingMaskIntoConstraints="NO" id="EVA-5d-rdC">
+                                <rect key="frame" x="0.0" y="280" width="200" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1xN-BH-kYg"/>
+                                    <constraint firstAttribute="height" constant="225" id="8ar-iz-xZL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="donald-trump-standing-flipped" translatesAutoresizingMaskIntoConstraints="NO" id="WNk-Gf-XAH">
+                                <rect key="frame" x="400" y="275" width="200" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="YCO-Tp-y7F"/>
+                                    <constraint firstAttribute="width" constant="200" id="jf4-sZ-2kT"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9i-yd-Pto">
+                                <rect key="frame" x="0.0" y="513" width="85" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="SDz-P5-YrK"/>
+                                    <constraint firstAttribute="width" constant="85" id="opf-QJ-WYn"/>
+                                </constraints>
+                                <state key="normal" image="white-house-small"/>
+                                <connections>
+                                    <action selector="playerOneAttackBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M7T-dP-brv"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09V-E3-IaR">
+                                <rect key="frame" x="515" y="513" width="85" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Igx-i7-t5o"/>
+                                    <constraint firstAttribute="width" constant="85" id="rdY-ya-fxE"/>
+                                </constraints>
+                                <state key="normal" image="white-house-small"/>
+                                <connections>
+                                    <action selector="playerTwoAttackBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gNU-vg-qr4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ready-Your-Vote" translatesAutoresizingMaskIntoConstraints="NO" id="1z0-95-d9B">
+                                <rect key="frame" x="138" y="39" width="325" height="128"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trump-fist-colored" translatesAutoresizingMaskIntoConstraints="NO" id="qaQ-EM-2gW">
+                                <rect key="frame" x="445" y="275" width="111" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="qFv-5l-8NX"/>
+                                    <constraint firstAttribute="height" constant="95" id="znT-7J-ngy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trump-fist-colored" translatesAutoresizingMaskIntoConstraints="NO" id="4WM-T9-O34">
+                                <rect key="frame" x="45" y="280" width="111" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="Lil-LS-Vz9"/>
+                                    <constraint firstAttribute="width" constant="111" id="ebf-pe-Y83"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 HP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBu-rd-NBw">
+                                <rect key="frame" x="164" y="307" width="78" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="fQH-Yj-zdG"/>
+                                    <constraint firstAttribute="width" constant="78" id="tLD-fr-XQR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="-2" height="-2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 HP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-HM-dIt">
+                                <rect key="frame" x="359" y="299" width="78" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="5If-wa-LIq"/>
+                                    <constraint firstAttribute="height" constant="31" id="5ap-wr-pSx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="-2" height="-2"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNU-gP-ucA">
+                                <rect key="frame" x="-6" y="353" width="192" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="adM-Gv-MV4"/>
+                                    <constraint firstAttribute="width" constant="192" id="eeO-yb-ANn"/>
+                                </constraints>
+                                <state key="normal" image="Ready-Your-Vote"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLi-tM-9S7">
+                                <rect key="frame" x="395" y="353" width="192" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="Otn-VA-9hy"/>
+                                    <constraint firstAttribute="width" constant="192" id="beu-Ud-KAv"/>
+                                </constraints>
+                                <state key="normal" image="Ready-Your-Vote"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WNk-Gf-XAH" firstAttribute="leading" secondItem="Z44-HM-dIt" secondAttribute="leading" id="2Gj-i9-TBb"/>
+                            <constraint firstAttribute="trailing" secondItem="WNk-Gf-XAH" secondAttribute="trailing" id="5NW-Sd-cF4"/>
+                            <constraint firstItem="1z0-95-d9B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AYo-Ka-V5v"/>
+                            <constraint firstItem="NXc-Xa-g8J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BEg-HF-rXd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NXc-Xa-g8J" secondAttribute="bottom" id="CDv-4B-mMZ"/>
+                            <constraint firstItem="4WM-T9-O34" firstAttribute="centerX" secondItem="EVA-5d-rdC" secondAttribute="centerX" id="J8q-R1-hoq"/>
+                            <constraint firstItem="qaQ-EM-2gW" firstAttribute="top" secondItem="WNk-Gf-XAH" secondAttribute="top" id="K7O-DA-Djm"/>
+                            <constraint firstItem="EVA-5d-rdC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PEh-h7-rtK"/>
+                            <constraint firstItem="QLi-tM-9S7" firstAttribute="centerY" secondItem="WNk-Gf-XAH" secondAttribute="centerY" id="Vzn-0H-2jl"/>
+                            <constraint firstItem="QLi-tM-9S7" firstAttribute="centerX" secondItem="WNk-Gf-XAH" secondAttribute="centerX" id="WQx-hb-zbd"/>
+                            <constraint firstItem="4WM-T9-O34" firstAttribute="top" secondItem="EVA-5d-rdC" secondAttribute="top" id="XcJ-LO-yYD"/>
+                            <constraint firstItem="WNk-Gf-XAH" firstAttribute="top" secondItem="Z44-HM-dIt" secondAttribute="top" id="Y4K-5J-5h0"/>
+                            <constraint firstItem="fBu-rd-NBw" firstAttribute="top" secondItem="EVA-5d-rdC" secondAttribute="top" id="Yso-QF-QFF"/>
+                            <constraint firstItem="1z0-95-d9B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="aNz-Mb-WwQ"/>
+                            <constraint firstItem="qaQ-EM-2gW" firstAttribute="centerX" secondItem="WNk-Gf-XAH" secondAttribute="centerX" id="aeY-0l-IQn"/>
+                            <constraint firstItem="q9i-yd-Pto" firstAttribute="top" secondItem="EVA-5d-rdC" secondAttribute="bottom" id="evg-Wb-wBw"/>
+                            <constraint firstItem="aNU-gP-ucA" firstAttribute="centerX" secondItem="EVA-5d-rdC" secondAttribute="centerX" id="jiN-oj-PtO"/>
+                            <constraint firstAttribute="trailing" secondItem="1z0-95-d9B" secondAttribute="trailing" id="l96-yN-AMp"/>
+                            <constraint firstItem="1z0-95-d9B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oOW-iO-hXh"/>
+                            <constraint firstItem="fBu-rd-NBw" firstAttribute="trailing" secondItem="EVA-5d-rdC" secondAttribute="trailing" id="ox0-6T-rZA"/>
+                            <constraint firstItem="WNk-Gf-XAH" firstAttribute="centerY" secondItem="EVA-5d-rdC" secondAttribute="centerY" id="prI-jG-xAk"/>
+                            <constraint firstAttribute="trailing" secondItem="NXc-Xa-g8J" secondAttribute="trailing" id="qRE-TZ-SDJ"/>
+                            <constraint firstItem="q9i-yd-Pto" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="s0Y-Wc-tva"/>
+                            <constraint firstItem="09V-E3-IaR" firstAttribute="centerY" secondItem="q9i-yd-Pto" secondAttribute="centerY" id="t0C-NF-H5o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="09V-E3-IaR" secondAttribute="bottom" constant="10" id="xXq-q8-LZn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q9i-yd-Pto" secondAttribute="bottom" constant="10" id="xyG-eA-CL4"/>
+                            <constraint firstItem="NXc-Xa-g8J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y2c-9L-8uh"/>
+                            <constraint firstItem="aNU-gP-ucA" firstAttribute="centerY" secondItem="EVA-5d-rdC" secondAttribute="centerY" id="yuF-Dn-T7y"/>
+                            <constraint firstAttribute="trailing" secondItem="09V-E3-IaR" secondAttribute="trailing" constant="10" id="zdO-be-8WI"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="countdownImg" destination="1z0-95-d9B" id="AEe-aq-Kfq"/>
+                        <outlet property="playerOneAttackBtn" destination="q9i-yd-Pto" id="3aT-4V-TQb"/>
+                        <outlet property="playerOneFist" destination="4WM-T9-O34" id="bmi-Eg-uHc"/>
+                        <outlet property="playerOneHpLbl" destination="fBu-rd-NBw" id="UVE-GZ-Axb"/>
+                        <outlet property="playerOneImg" destination="EVA-5d-rdC" id="b7c-aL-uJy"/>
+                        <outlet property="playerOneLootBtn" destination="aNU-gP-ucA" id="fNU-Qe-Ny2"/>
+                        <outlet property="playerTwoAttackBtn" destination="09V-E3-IaR" id="WvE-Tw-jkS"/>
+                        <outlet property="playerTwoFist" destination="qaQ-EM-2gW" id="n17-qy-HiA"/>
+                        <outlet property="playerTwoHpLbl" destination="Z44-HM-dIt" id="qwm-RR-sWg"/>
+                        <outlet property="playerTwoImg" destination="WNk-Gf-XAH" id="LRA-68-T8n"/>
+                        <outlet property="playerTwoLootBtn" destination="QLi-tM-9S7" id="j1c-eE-BeH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="525"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ready-Your-Vote" width="1092" height="115"/>
+        <image name="donald-trump-standing" width="286" height="788"/>
+        <image name="donald-trump-standing-flipped" width="286" height="788"/>
+        <image name="the-white-house" width="1920" height="937"/>
+        <image name="trump-fist-colored" width="642" height="601"/>
+        <image name="white-house-small" width="192" height="133"/>
+    </resources>
+</document>
