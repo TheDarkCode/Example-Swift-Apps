@@ -190,8 +190,8 @@ class Game: ViewController {
     }
     
     func showAttackButtons() {
-        playerOneAttackBtn.hidden = false
-        playerTwoAttackBtn.hidden = false
+        showPlayerOneAttackBtn()
+        showPlayerTwoAttackBtn()
     }
     
     func hideAttackButtons() {
@@ -215,8 +215,6 @@ class Game: ViewController {
         
         showFist(targetPlayer)
         
-        delayAttack(targetPlayer)
-        
         if targetPlayer == 1 {
             if let attackPwr: Int = playerTwo.attackPower {
                 playerOne.attemptAttack(attackPwr)
@@ -224,11 +222,13 @@ class Game: ViewController {
                     playerOneHpLbl.text = "\(playerHp) HP"
                     if playerHp <= 80 && playerHp >= 51 {
                         
+                        delayAttack(targetPlayer)
                         // slightly roughed up
                         playerOneImg.image = UIImage(named: "donald-trump-standing2")
                         
                     } else if playerHp <= 50 && playerHp > 0 {
                         
+                        delayAttack(targetPlayer)
                         // very hurt
                         playerOneImg.image = UIImage(named: "donald-trump-standing3")
                         
@@ -246,11 +246,13 @@ class Game: ViewController {
                     playerTwoHpLbl.text = "\(playerHp) HP"
                     if playerHp <= 80 && playerHp >= 51 {
                         
+                        delayAttack(targetPlayer)
                         // slightly roughed up
                         playerTwoImg.image = UIImage(named: "donald-trump-standing2-flipped")
                         
                     } else if playerHp <= 50 && playerHp > 0 {
                         
+                        delayAttack(targetPlayer)
                         // very hurt
                         playerTwoImg.image = UIImage(named: "donald-trump-standing3-flipped")
                         
@@ -284,6 +286,8 @@ class Game: ViewController {
             //playerOneLootBtn.hidden = false
             
         }
+        
+        // deathMusic.play()
         
         //NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "fightCountdown", userInfo: nil, repeats: false)
     
@@ -321,11 +325,17 @@ class Game: ViewController {
     func delayAttack(targetPlayer: Int) {
         if targetPlayer == 1 {
             playerOneAttackBtn.hidden = true
-            NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "showPlayerOneAttackBtn", userInfo: nil, repeats: false)
+            
+            if fightIsOn == true {
+                NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "showPlayerOneAttackBtn", userInfo: nil, repeats: false)
+            }
             
         } else if targetPlayer == 2 {
             playerTwoAttackBtn.hidden = true
-            NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "showPlayerTwoAttackBtn", userInfo: nil, repeats: false)
+            
+            if fightIsOn == true {
+                NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "showPlayerTwoAttackBtn", userInfo: nil, repeats: false)
+            }
         }
         
         
