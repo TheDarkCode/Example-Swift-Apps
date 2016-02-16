@@ -1,6 +1,6 @@
 //
 //  SoundEffect.swift
-//  Sample class for quickly incorporating sound effects.
+//  advanced-game-exercise
 //
 //  Created by Mark Hamilton on 2/16/16.
 //  Copyright © 2016 dryverless. All rights reserved.
@@ -17,6 +17,8 @@ class SoundEffect {
     private var _loop: Bool! = false
     private var _playing: Bool! = false
     private var _volume: Float! = 1.0
+    private var _duration: NSTimeInterval! = nil
+    private var _numberOfLoops: Int! = 0
     
     var sound: AVAudioPlayer!
     
@@ -66,6 +68,66 @@ class SoundEffect {
         }
     }
     
+    var duration: NSTimeInterval {
+        get {
+            if let soundDuration: NSTimeInterval = sound.duration {
+                return soundDuration
+            } else {
+                return _duration
+            }
+        }
+    }
+    
+    var numberOfLoops: Int {
+        get {
+            return _numberOfLoops
+        }
+    }
+    
+    init(fileName: String, fileType: String) {
+        
+        self._name = fileName
+        self._ofType = fileType
+        
+    }
+    
+    init(fileName: String, fileType: String, enableSound: Bool?, enableLooping: Bool?) {
+        
+        self._name = fileName
+        self._ofType = fileType
+        
+        if let setEnable = enableSound {
+            self._isEnabled = setEnable
+        }
+        
+        if let looping = enableLooping {
+            self._loop = looping
+        }
+    
+    }
+    
+    init(fileName: String, fileType: String, enableSound: Bool?, enableLooping: Bool?, loopTotal: Int?, defaultVolume: Float?) {
+        
+        self._name = fileName
+        self._ofType = fileType
+        
+        if let setEnable = enableSound {
+            self._isEnabled = setEnable
+        }
+        
+        if let looping = enableLooping {
+            self._loop = looping
+        }
+        
+        if let loopCount = loopTotal {
+            self._numberOfLoops = loopCount
+        }
+        
+        if let setVolume = defaultVolume {
+            self._volume = setVolume
+        }
+    }
+    
     init(fileName: String, fileType: String, enableSound: Bool?, enableLooping: Bool?, defaultVolume: Float?) {
         
         self._name = fileName
@@ -82,6 +144,10 @@ class SoundEffect {
         if let setVolume = defaultVolume {
             self._volume = setVolume
         }
+    }
+    
+    init() {
+        // must have sound.wav file
     }
     
     func prepareToPlay() {
@@ -130,6 +196,14 @@ class SoundEffect {
         if sound.playing {
             sound.stop()
         }
+    }
+    
+    func pause() {
+        
+        if sound.playing {
+            sound.pause()
+        }
+    
     }
     
     func enable() {
