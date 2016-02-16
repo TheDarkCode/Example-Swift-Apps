@@ -297,6 +297,12 @@ class Game: ViewController {
             playerOneHpLbl.text = "\(playerOneHp) HP"
             playerTwoHpLbl.text = "\(playerTwoHp) HP"
             
+            if playerOneImg.image != UIImage(named: "donald-trump-standing") {
+                playerOneImg.image = UIImage(named: "donald-trump-standing")
+            } else if playerTwoImg.image != UIImage(named: "donald-trump-standing-flipped") {
+                playerTwoImg.image = UIImage(named: "donald-trump-standing-flipped")
+            }
+            
             if playerOneImg.hidden == true {
                 playerOneImg.hidden = false
             } else if playerTwoImg.hidden == true {
