@@ -123,8 +123,9 @@ class DynamicImage: UIImageView {
                 
             }
             
-        
         }
+        
+        self.startAnimating()
         
     }
     
