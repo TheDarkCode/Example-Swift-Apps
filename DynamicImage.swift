@@ -39,9 +39,13 @@ class DynamicImage: UIImageView {
     convenience init(frame: CGRect, defaultAnimation: Animation?, animationArray: [Animation]?) {
         self.init(frame: frame)
         
-        self._animation = defaultAnimation
+        if let anim = defaultAnimation {
+            self._animation = anim
+        }
         
-        self._animations = animationArray
+        if let anims = animationArray {
+            self._animations = anims
+        }
         
     }
     
@@ -54,6 +58,21 @@ class DynamicImage: UIImageView {
         playDefaultAnimation()
     }
     
+    
+    func playRandomAnimation() {
+        
+        var random: Int = 0
+        
+        if let count: Int = animations.count {
+            
+            let rand = arc4random_uniform(UInt32(count))
+            random = Int(rand)
+            
+        }
+        
+        playCustomAnimation(random)
+        
+    }
     
     func playDefaultAnimation() {
         
