@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FenwayPhotosVC" customModule="favorite_place_exercise" customModuleProvider="target">
+            <connections>
+                <outlet property="focusImage" destination="07G-MM-zPG" id="gzB-25-tOh"/>
+                <outlet property="photoFive" destination="esl-sU-Hrv" id="GYe-jK-15H"/>
+                <outlet property="photoFour" destination="eiz-Ch-Uqb" id="cZV-7J-B6c"/>
+                <outlet property="photoOne" destination="b5y-HO-vJD" id="tpM-PF-I5a"/>
+                <outlet property="photoThree" destination="nHz-oJ-fPv" id="gso-nQ-D8d"/>
+                <outlet property="photoTwo" destination="Pe3-Fh-gdm" id="wsy-gZ-vcP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fenway1" translatesAutoresizingMaskIntoConstraints="NO" id="J3j-XB-i8c">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHk-ww-7a4">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sMa-mb-SUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-Kl-H4C">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="xPn-p5-PI8">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <blurEffect style="extraLight"/>
+                </visualEffectView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LA5-Xf-qMu">
+                    <rect key="frame" x="0.0" y="259" width="600" height="82"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3SA-3x-A50">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-AM-new">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="8Cl-zK-KmT">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="SMY-mn-fSL"/>
+                    </constraints>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2L-R3-kYh">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IPC-EB-gLJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doF-JV-cUo">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Nhu-3E-mGy">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="TsH-OH-jeI"/>
+                    </constraints>
+                    <blurEffect style="extraLight"/>
+                </visualEffectView>
+                <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCg-rY-b0s" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                    <rect key="frame" x="250" y="255" width="100" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="9CF-Fq-Ghr"/>
+                        <constraint firstAttribute="width" constant="100" id="Qai-MV-Y0a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="kJM-oT-rCn"/>
+                    </connections>
+                </button>
+                <stackView contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="AOr-v9-9GB">
+                    <rect key="frame" x="8" y="90" width="540" height="480"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rKD-Kf-Nrh">
+                            <rect key="frame" x="0.0" y="0.0" width="540" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5y-HO-vJD" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="88" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="88" id="1AD-Dx-7o3"/>
+                                        <constraint firstAttribute="width" constant="88" id="EMl-OM-yA6"/>
+                                    </constraints>
+                                    <state key="normal" image="fenway1"/>
+                                    <connections>
+                                        <action selector="photoOnePressed:" destination="-1" eventType="touchUpInside" id="aCJ-fe-OYH"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe3-Fh-gdm" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                                    <rect key="frame" x="113" y="0.0" width="88" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="88" id="cAe-FM-sUM"/>
+                                        <constraint firstAttribute="height" constant="88" id="nVA-UQ-jDd"/>
+                                    </constraints>
+                                    <state key="normal" image="fenway2"/>
+                                    <connections>
+                                        <action selector="photoTwoPressed:" destination="-1" eventType="touchUpInside" id="Mjz-IR-cGs"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHz-oJ-fPv" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                                    <rect key="frame" x="226" y="0.0" width="88" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="88" id="0Tr-Ts-Bvg"/>
+                                        <constraint firstAttribute="width" constant="88" id="wG1-84-c7V"/>
+                                    </constraints>
+                                    <state key="normal" image="fenway3"/>
+                                    <connections>
+                                        <action selector="photoThreePressed:" destination="-1" eventType="touchUpInside" id="L7I-0v-TiX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiz-Ch-Uqb" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                                    <rect key="frame" x="339" y="0.0" width="88" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="88" id="Gli-Yq-Tj7"/>
+                                        <constraint firstAttribute="width" constant="88" id="NWB-o4-yzj"/>
+                                    </constraints>
+                                    <state key="normal" image="fenway4"/>
+                                    <connections>
+                                        <action selector="photoFourPressed:" destination="-1" eventType="touchUpInside" id="QRs-U7-6Jn"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esl-sU-Hrv" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                                    <rect key="frame" x="452" y="0.0" width="88" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="88" id="q0F-8S-fHb"/>
+                                        <constraint firstAttribute="height" constant="88" id="zUh-Jq-bJT"/>
+                                    </constraints>
+                                    <state key="normal" image="fenway5"/>
+                                    <connections>
+                                        <action selector="photoFivePressed:" destination="-1" eventType="touchUpInside" id="3dU-Lv-Sak"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Hai-eC-zq3"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1WQ-8d-PB2">
+                            <rect key="frame" x="0.0" y="65" width="540" height="415"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fenway1" translatesAutoresizingMaskIntoConstraints="NO" id="07G-MM-zPG" customClass="RoundedImage" customModule="favorite_place_exercise" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="540" height="415"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="rKD-Kf-Nrh" firstAttribute="leading" secondItem="AOr-v9-9GB" secondAttribute="leading" id="N0B-aA-hhb"/>
+                        <constraint firstAttribute="trailing" secondItem="rKD-Kf-Nrh" secondAttribute="trailing" id="NTm-jk-xBQ"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="J3j-XB-i8c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0PB-Ji-bhl"/>
+                <constraint firstItem="J3j-XB-i8c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7NV-c5-qm5"/>
+                <constraint firstItem="B2L-R3-kYh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="B0w-1T-Fbv"/>
+                <constraint firstAttribute="trailing" secondItem="LA5-Xf-qMu" secondAttribute="trailing" id="CXm-cz-rQI"/>
+                <constraint firstItem="LA5-Xf-qMu" firstAttribute="top" secondItem="B2L-R3-kYh" secondAttribute="bottom" id="HR4-4d-RK2"/>
+                <constraint firstItem="bCg-rY-b0s" firstAttribute="top" secondItem="B2L-R3-kYh" secondAttribute="top" id="IId-FP-siY"/>
+                <constraint firstAttribute="trailing" secondItem="J3j-XB-i8c" secondAttribute="trailing" id="KCE-Up-EwN"/>
+                <constraint firstItem="xHk-ww-7a4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KJO-wm-FQm"/>
+                <constraint firstAttribute="trailing" secondItem="B2L-R3-kYh" secondAttribute="trailing" id="MF8-sR-IgU"/>
+                <constraint firstItem="AOr-v9-9GB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="Nkx-LA-SBv"/>
+                <constraint firstAttribute="bottom" secondItem="xHk-ww-7a4" secondAttribute="bottom" id="OYH-qr-stT"/>
+                <constraint firstItem="B2L-R3-kYh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pp2-rd-vED"/>
+                <constraint firstItem="LA5-Xf-qMu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WA1-Iq-OVC"/>
+                <constraint firstAttribute="bottom" secondItem="AOr-v9-9GB" secondAttribute="bottom" constant="20" id="WmC-p7-Vmf"/>
+                <constraint firstItem="xHk-ww-7a4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xuc-T6-E4c"/>
+                <constraint firstAttribute="bottom" secondItem="J3j-XB-i8c" secondAttribute="bottom" id="fEd-Ig-Vd9"/>
+                <constraint firstItem="AOr-v9-9GB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="grh-bc-M29"/>
+                <constraint firstAttribute="trailing" secondItem="AOr-v9-9GB" secondAttribute="trailing" constant="10" id="jVs-Fq-JkD"/>
+                <constraint firstItem="bCg-rY-b0s" firstAttribute="leading" secondItem="B2L-R3-kYh" secondAttribute="leading" id="l4d-ob-aL0"/>
+                <constraint firstAttribute="trailing" secondItem="xHk-ww-7a4" secondAttribute="trailing" id="rRB-vR-qaM"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="fenway1" width="1280" height="720"/>
+        <image name="fenway2" width="2592" height="1944"/>
+        <image name="fenway3" width="1648" height="704"/>
+        <image name="fenway4" width="1920" height="1080"/>
+        <image name="fenway5" width="900" height="519"/>
+    </resources>
+</document>

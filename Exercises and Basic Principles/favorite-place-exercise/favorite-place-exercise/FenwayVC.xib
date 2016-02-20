@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FenwayVC" customModule="favorite_place_exercise" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fenway1" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-up-asK">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5GJ-Io-duP" customClass="RoundedUIVisualEffectView" customModule="favorite_place_exercise" customModuleProvider="target">
+                    <rect key="frame" x="32" y="350" width="536" height="219"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RW1-DF-EPL">
+                        <rect key="frame" x="0.0" y="0.0" width="536" height="219"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dF-p6-CFc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="KUu-jo-aPh">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="bBT-bC-DD8"/>
+                        <constraint firstAttribute="width" constant="300" id="d91-Ym-kjq"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ybb-cX-r1n">
+                    <rect key="frame" x="233" y="266" width="135" height="75"/>
+                    <subviews>
+                        <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X81-Jc-Fgt" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="RJe-wL-6fs"/>
+                                <constraint firstAttribute="width" constant="135" id="Wb5-JG-8Wy"/>
+                                <constraint firstAttribute="width" constant="159" id="sXH-TF-23P"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                            <state key="normal" title="Fenway History">
+                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="RJe-wL-6fs"/>
+                                    <exclude reference="sXH-TF-23P"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="RJe-wL-6fs"/>
+                                    <include reference="sXH-TF-23P"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="fenwayDetailsVC:" destination="-1" eventType="touchUpInside" id="SfU-U7-FWn"/>
+                            </connections>
+                        </button>
+                        <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPw-Ol-aoz" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="45" width="135" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="LLq-VQ-xEf"/>
+                                <constraint firstAttribute="width" constant="135" id="Xz7-Gx-mPt"/>
+                                <constraint firstAttribute="width" constant="159" id="qfn-f7-W33"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                            <state key="normal" title="Fenway Photos">
+                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="LLq-VQ-xEf"/>
+                                    <exclude reference="qfn-f7-W33"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="LLq-VQ-xEf"/>
+                                    <include reference="qfn-f7-W33"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="loadFenwayPhotosVC:" destination="-1" eventType="touchUpInside" id="pPz-WO-E0s"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Y7g-up-asK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SVP-k9-0uT"/>
+                <constraint firstItem="5GJ-Io-duP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aYt-yE-ZVV"/>
+                <constraint firstItem="Ybb-cX-r1n" firstAttribute="centerY" secondItem="5GJ-Io-duP" secondAttribute="centerY" id="dDG-uy-Nm2"/>
+                <constraint firstAttribute="trailing" secondItem="Y7g-up-asK" secondAttribute="trailing" id="gdg-Nb-j9x"/>
+                <constraint firstAttribute="bottom" secondItem="Y7g-up-asK" secondAttribute="bottom" id="jBZ-XC-je9"/>
+                <constraint firstAttribute="bottom" secondItem="5GJ-Io-duP" secondAttribute="bottom" constant="30" id="ogA-Ln-Fup"/>
+                <constraint firstItem="Ybb-cX-r1n" firstAttribute="centerX" secondItem="5GJ-Io-duP" secondAttribute="centerX" id="sg7-zt-B5j"/>
+                <constraint firstItem="Y7g-up-asK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="z6P-nJ-CqO"/>
+            </constraints>
+            <point key="canvasLocation" x="529" y="496"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fenway1" width="1280" height="720"/>
+    </resources>
+</document>

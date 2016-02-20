@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FenwayDetailsVC" customModule="favorite_place_exercise" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="uOI-An-Ma7" id="p0F-Rk-hYT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fenway4" translatesAutoresizingMaskIntoConstraints="NO" id="zI0-xI-ZxR">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6DR-qR-3Mp">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3i1-dR-bZg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JeP-Sf-Enk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="mIM-5W-fXh">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fenway4" translatesAutoresizingMaskIntoConstraints="NO" id="tzY-ll-fQc">
+                                <rect key="frame" x="180" y="83" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tzY-ll-fQc" firstAttribute="leading" secondItem="3i1-dR-bZg" secondAttribute="leading" constant="20" id="R8M-Dq-XRZ"/>
+                            <constraint firstItem="tzY-ll-fQc" firstAttribute="top" secondItem="3i1-dR-bZg" secondAttribute="top" constant="80" id="ddq-Oo-UG3"/>
+                            <constraint firstAttribute="bottom" secondItem="tzY-ll-fQc" secondAttribute="bottom" constant="200" id="fLg-E8-mSp"/>
+                            <constraint firstAttribute="trailing" secondItem="tzY-ll-fQc" secondAttribute="trailing" constant="20" id="xYQ-os-iL3"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="extraLight"/>
+                    <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="100" y="-100" width="600" height="600"/>
+                    </variation>
+                </visualEffectView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBm-yJ-fvh">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Hif-mQ-hmW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hg-i9-Txn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="PXs-Ro-DhF">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="qRf-SF-UxK"/>
+                    </constraints>
+                    <blurEffect style="extraLight"/>
+                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="100" y="159" width="600" height="82"/>
+                    </variation>
+                </visualEffectView>
+                <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOI-An-Ma7" customClass="RoundedButton" customModule="favorite_place_exercise" customModuleProvider="target">
+                    <rect key="frame" x="250" y="255" width="100" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="nwu-50-X3u"/>
+                        <constraint firstAttribute="width" constant="100" id="zHF-BF-gBN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="350" y="155" width="100" height="90"/>
+                    </variation>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="d0d-V8-lFz"/>
+                    </connections>
+                </button>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wUe-Sh-Dzh">
+                    <rect key="frame" x="0.0" y="174" width="600" height="278"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="lu6-c0-TVH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="278"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGv-P5-rRQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="2Hg-tb-8c3">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                        <variation key="heightClass=compact" ambiguous="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="125"/>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="800" height="129"/>
+                        </variation>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="129" id="4eL-NC-sa7"/>
+                        <constraint firstAttribute="height" constant="208" id="O4D-Qe-9ti"/>
+                        <constraint firstAttribute="height" constant="500" id="gFc-FJ-gZo">
+                            <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                        </constraint>
+                    </constraints>
+                    <blurEffect style="extraLight"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="4eL-NC-sa7"/>
+                            <exclude reference="O4D-Qe-9ti"/>
+                            <exclude reference="gFc-FJ-gZo"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="0.0" y="271" width="600" height="129"/>
+                        <mask key="constraints">
+                            <include reference="4eL-NC-sa7"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="0.0" y="522" width="600" height="278"/>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="O4D-Qe-9ti"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="275" width="400" height="125"/>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="0.0" y="271" width="800" height="129"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                        <rect key="frame" x="0.0" y="551" width="800" height="249"/>
+                        <mask key="constraints">
+                            <include reference="gFc-FJ-gZo"/>
+                        </mask>
+                    </variation>
+                </visualEffectView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-E7-smn">
+                    <rect key="frame" x="160" y="234" width="432" height="288"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Arg-sO-72k"/>
+                    </constraints>
+                    <mutableString key="text">The Red Sox moved to Fenway Park from the old Huntington Avenue Grounds. In 1911, owner John I. Taylor purchased the land bordered by Brookline Avenue, Jersey Street, Van Ness Street and Lansdowne Street and developed it into a larger baseball stadium.[13]
+
+Taylor claimed the name Fenway Park came from its location in the Fenway neighborhood of Boston, which was partially created late in the nineteenth century by filling in marshland or "fens",[13] to create the Back Bay Fens urban park. However, given that Taylor's family also owned the Fenway Realty Company, the promotional value of the naming at the time has been cited as well.[14] Like many classic ballparks, Fenway Park was constructed on an asymmetrical block, with consequent asymmetry in its field dimensions.[15] The General Contractor was the Charles Logue Building Company.[16]</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wUe-Sh-Dzh" secondAttribute="trailing" id="6Pu-0I-HXe"/>
+                <constraint firstAttribute="bottom" secondItem="zI0-xI-ZxR" secondAttribute="bottom" id="6ZZ-16-F4e"/>
+                <constraint firstAttribute="trailing" secondItem="Ah9-E7-smn" secondAttribute="trailing" constant="20" id="8fd-vM-JCk"/>
+                <constraint firstItem="zI0-xI-ZxR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hgq-qN-XJW"/>
+                <constraint firstItem="uOI-An-Ma7" firstAttribute="top" secondItem="lBm-yJ-fvh" secondAttribute="top" id="IWX-Ho-XiG"/>
+                <constraint firstAttribute="bottom" secondItem="wUe-Sh-Dzh" secondAttribute="bottom" id="Jut-Aj-muc"/>
+                <constraint firstItem="zI0-xI-ZxR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OXZ-VW-2b0"/>
+                <constraint firstAttribute="trailing" secondItem="wUe-Sh-Dzh" secondAttribute="trailing" id="OtT-xG-qdk"/>
+                <constraint firstAttribute="trailing" secondItem="wUe-Sh-Dzh" secondAttribute="trailing" id="SHh-IR-ymb"/>
+                <constraint firstAttribute="bottom" secondItem="6DR-qR-3Mp" secondAttribute="bottom" id="VsU-69-vfY"/>
+                <constraint firstItem="lBm-yJ-fvh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wcg-Rb-dj6"/>
+                <constraint firstItem="wUe-Sh-Dzh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YHo-Uj-JZC"/>
+                <constraint firstItem="6DR-qR-3Mp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZK5-Kk-QpO"/>
+                <constraint firstAttribute="trailing" secondItem="lBm-yJ-fvh" secondAttribute="trailing" id="ZXe-Df-Q07"/>
+                <constraint firstAttribute="trailing" secondItem="zI0-xI-ZxR" secondAttribute="trailing" id="cac-eR-Lvq"/>
+                <constraint firstItem="uOI-An-Ma7" firstAttribute="leading" secondItem="lBm-yJ-fvh" secondAttribute="leading" id="dNT-Lo-if9"/>
+                <constraint firstItem="wUe-Sh-Dzh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dOy-Ea-oKJ"/>
+                <constraint firstItem="Ah9-E7-smn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="gxc-5r-7np"/>
+                <constraint firstAttribute="bottom" secondItem="wUe-Sh-Dzh" secondAttribute="bottom" id="ifd-6x-eEa"/>
+                <constraint firstItem="Ah9-E7-smn" firstAttribute="centerY" secondItem="wUe-Sh-Dzh" secondAttribute="centerY" id="lIc-rQ-QeU"/>
+                <constraint firstItem="6DR-qR-3Mp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lNb-D7-BCp"/>
+                <constraint firstItem="lBm-yJ-fvh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qre-RD-xI8"/>
+                <constraint firstAttribute="trailing" secondItem="6DR-qR-3Mp" secondAttribute="trailing" id="uDR-jT-t3L"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="6Pu-0I-HXe"/>
+                    <exclude reference="Jut-Aj-muc"/>
+                    <exclude reference="OtT-xG-qdk"/>
+                    <exclude reference="SHh-IR-ymb"/>
+                    <exclude reference="YHo-Uj-JZC"/>
+                    <exclude reference="dOy-Ea-oKJ"/>
+                    <exclude reference="ifd-6x-eEa"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <include reference="OtT-xG-qdk"/>
+                    <include reference="YHo-Uj-JZC"/>
+                    <include reference="ifd-6x-eEa"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="Jut-Aj-muc"/>
+                    <include reference="SHh-IR-ymb"/>
+                    <include reference="dOy-Ea-oKJ"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=regular">
+                <mask key="subviews">
+                    <include reference="6DR-qR-3Mp"/>
+                    <include reference="lBm-yJ-fvh"/>
+                    <include reference="uOI-An-Ma7"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="6Pu-0I-HXe"/>
+                </mask>
+            </variation>
+        </view>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="c7O-rM-t6k">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="574" y="1024"/>
+        </scrollView>
+    </objects>
+    <resources>
+        <image name="fenway4" width="1920" height="1080"/>
+    </resources>
+</document>

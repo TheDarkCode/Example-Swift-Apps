@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mvc_basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="vader" translatesAutoresizingMaskIntoConstraints="NO" id="QtH-n1-Zxm" customClass="RoundedImageView" customModule="mvc_basics" customModuleProvider="target">
+                                <rect key="frame" x="53" y="151" width="495" height="264"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYJ-J5-kK8">
+                                <rect key="frame" x="206" y="242" width="188" height="81"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cd-at-ePW">
+                                <rect key="frame" x="197" y="331" width="207" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bnT-bS-imy"/>
+                                    <constraint firstAttribute="width" constant="207" id="mfl-4C-9FH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV7-Vv-rVa">
+                                <rect key="frame" x="246" y="525" width="108" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.10258613905456671" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="n0R-vW-zbC"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="110" id="poe-Rc-4Xp"/>
+                                </constraints>
+                                <state key="normal" title="Change Name">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeNameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q2F-9X-AhX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QtH-n1-Zxm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8h7-iL-Onn"/>
+                            <constraint firstItem="6cd-at-ePW" firstAttribute="centerX" secondItem="aYJ-J5-kK8" secondAttribute="centerX" id="BvD-tE-9hg"/>
+                            <constraint firstItem="QtH-n1-Zxm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="E3V-TZ-zrx"/>
+                            <constraint firstItem="aYJ-J5-kK8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SPa-2j-KFw"/>
+                            <constraint firstItem="aYJ-J5-kK8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z8e-XQ-CxG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rV7-Vv-rVa" secondAttribute="bottom" constant="20" id="dzX-JL-04X"/>
+                            <constraint firstItem="QtH-n1-Zxm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jF4-Ja-4hx"/>
+                            <constraint firstItem="QtH-n1-Zxm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="mvL-Hp-Dfx"/>
+                            <constraint firstItem="6cd-at-ePW" firstAttribute="top" secondItem="aYJ-J5-kK8" secondAttribute="bottom" constant="10" id="odo-W9-MW7"/>
+                            <constraint firstAttribute="trailing" secondItem="QtH-n1-Zxm" secondAttribute="trailing" constant="25" id="qeP-W9-U6y"/>
+                            <constraint firstItem="rV7-Vv-rVa" firstAttribute="centerX" secondItem="6cd-at-ePW" secondAttribute="centerX" id="sLN-yN-BOd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QtH-n1-Zxm" secondAttribute="bottom" constant="25" id="z9l-oS-8x0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8h7-iL-Onn"/>
+                                <exclude reference="jF4-Ja-4hx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="changeNameBtn" destination="rV7-Vv-rVa" id="RQj-X8-lYT"/>
+                        <outlet property="changeNameField" destination="6cd-at-ePW" id="arc-Ae-yew"/>
+                        <outlet property="fullName" destination="aYJ-J5-kK8" id="Hgi-iP-UhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="vader" width="1920" height="960"/>
+    </resources>
+</document>
