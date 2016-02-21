@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="enums_basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EEa-sT-qEV">
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-0N-xej">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIE-nE-qfP">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="200"/>
+                                                <state key="normal" image="bmw"/>
+                                                <connections>
+                                                    <action selector="onButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98O-si-dly"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY4-57-XMM">
+                                                <rect key="frame" x="140" y="0.0" width="140" height="200"/>
+                                                <state key="normal" image="tesla"/>
+                                                <connections>
+                                                    <action selector="onButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZl-jg-J6g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GH2-d3-7aQ">
+                                                <rect key="frame" x="280" y="0.0" width="140" height="200"/>
+                                                <state key="normal" image="ford"/>
+                                                <connections>
+                                                    <action selector="onButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pmN-fa-070"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQK-9v-IVx">
+                                                <rect key="frame" x="420" y="0.0" width="140" height="200"/>
+                                                <state key="normal" image="ferrari"/>
+                                                <connections>
+                                                    <action selector="onButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6r-zc-HTk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="MoL-1j-wG5"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lNB-pA-PgI">
+                                        <rect key="frame" x="0.0" y="200" width="560" height="340"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a bold decision." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-hS-grt">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="340"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="qed-4a-b1N"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="R4w-hS-grt" secondAttribute="trailing" id="pmY-JY-cxg"/>
+                                            <constraint firstItem="R4w-hS-grt" firstAttribute="leading" secondItem="lNB-pA-PgI" secondAttribute="leading" id="tu6-Gf-Ldf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lNB-pA-PgI" firstAttribute="leading" secondItem="EEa-sT-qEV" secondAttribute="leading" id="PMZ-8m-L8h"/>
+                                    <constraint firstAttribute="trailing" secondItem="lNB-pA-PgI" secondAttribute="trailing" id="afH-xi-R6q"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EEa-sT-qEV" secondAttribute="trailing" constant="20" id="7Hz-uJ-zfm"/>
+                            <constraint firstItem="EEa-sT-qEV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="KsA-ja-8rZ"/>
+                            <constraint firstAttribute="bottom" secondItem="EEa-sT-qEV" secondAttribute="bottom" constant="20" id="RV5-jl-PBz"/>
+                            <constraint firstItem="EEa-sT-qEV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="taM-hO-Kd0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carChoiceLabel" destination="R4w-hS-grt" id="IPC-HD-6R1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="876"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bmw" width="2048" height="1360"/>
+        <image name="ferrari" width="1600" height="941"/>
+        <image name="ford" width="900" height="336"/>
+        <image name="tesla" width="1387" height="600"/>
+    </resources>
+</document>
