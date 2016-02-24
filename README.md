@@ -1,5 +1,5 @@
 #Example Swift Apps
-Collection of example applications written in Swift / Objective-C for iOS 9.x
+Collection of example applications written in Swift / Objective-C for iOS 9.x (developed under 9.2.1 SDK - will be migrated to 9.3 when released)
 
 To help assist other developers working on transitioning from Hybrid Applications or Android development to Swift / Objective-C.
 
