@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="user_defaults_basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrj-tu-L1P">
+                                <rect key="frame" x="215" y="235" width="170" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.1025861391" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="1Pi-Z3-C7b"/>
+                                    <constraint firstAttribute="width" constant="170" id="ona-uZ-PhU"/>
+                                </constraints>
+                                <state key="normal" title="Pick Red">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPM-Lm-tRP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT8-Fw-mOf">
+                                <rect key="frame" x="215" y="288" width="170" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="LVt-EU-Cou"/>
+                                    <constraint firstAttribute="width" constant="170" id="gUn-nM-Ot7"/>
+                                </constraints>
+                                <state key="normal" title="Pick Blue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="blueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6j4-W7-Jxd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcj-qO-CR8">
+                                <rect key="frame" x="215" y="341" width="170" height="45"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.76078431369999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="YOw-xb-zuv"/>
+                                    <constraint firstAttribute="width" constant="170" id="uuy-SS-gt8"/>
+                                </constraints>
+                                <state key="normal" title="Pick Teal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tealButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qSo-ka-pdd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Color: Blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6O-Q0-xNE">
+                                <rect key="frame" x="190" y="28" width="220" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="RZi-Oa-f58"/>
+                                    <constraint firstAttribute="height" constant="59" id="Vlr-lz-qbG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oT8-Fw-mOf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ni-8d-UzZ"/>
+                            <constraint firstItem="Tcj-qO-CR8" firstAttribute="top" secondItem="oT8-Fw-mOf" secondAttribute="bottom" constant="20" id="BCN-KB-UOS"/>
+                            <constraint firstItem="h6O-Q0-xNE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="CuO-Po-3hw"/>
+                            <constraint firstItem="oT8-Fw-mOf" firstAttribute="top" secondItem="Jrj-tu-L1P" secondAttribute="bottom" constant="20" id="G88-Zd-RnD"/>
+                            <constraint firstItem="h6O-Q0-xNE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aTs-NG-VhL"/>
+                            <constraint firstItem="Jrj-tu-L1P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="kpV-kW-ovX"/>
+                            <constraint firstItem="Jrj-tu-L1P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q4w-II-x0o"/>
+                            <constraint firstItem="Tcj-qO-CR8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wXS-KQ-7Vl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueButton" destination="oT8-Fw-mOf" id="PRD-Qv-sF3"/>
+                        <outlet property="favoriteColorLabel" destination="h6O-Q0-xNE" id="GqS-3t-SkD"/>
+                        <outlet property="redButton" destination="Jrj-tu-L1P" id="6WG-V3-i0J"/>
+                        <outlet property="tealButton" destination="Tcj-qO-CR8" id="okj-O3-5rN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="429"/>
+        </scene>
+    </scenes>
+</document>
