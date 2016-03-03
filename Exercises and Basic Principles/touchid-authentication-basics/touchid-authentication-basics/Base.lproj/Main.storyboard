@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="touchid_authentication_basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmM-ZT-gdZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wq5-B6-wFI">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confused-travolta" translatesAutoresizingMaskIntoConstraints="NO" id="ieL-Y4-Du9">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        </imageView>
+                                        <visualEffectView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGg-an-B1r">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lEH-Y9-SK4">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
+                                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZ1-uy-uo2">
+                                            <rect key="frame" x="232" y="285" width="136" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="QRk-LL-t3f"/>
+                                                <constraint firstAttribute="width" constant="136" id="eQK-Ys-DLk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                            <size key="titleShadowOffset" width="1" height="1"/>
+                                            <state key="normal" title="Test TouchID">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="testTouchIdButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aiC-0q-4mk"/>
+                                            </connections>
+                                        </button>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUTHENTICATED!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyE-jU-jza">
+                                            <rect key="frame" x="109" y="111" width="382" height="74"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="74" id="2yR-g8-5LO"/>
+                                                <constraint firstAttribute="width" constant="382" id="ECq-Am-PoV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="30"/>
+                                            <color key="textColor" red="0.01176470588" green="0.76078431369999999" blue="0.0" alpha="0.7490301724137931" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ieL-Y4-Du9" firstAttribute="top" secondItem="wq5-B6-wFI" secondAttribute="top" id="5ZP-l5-pSa"/>
+                                        <constraint firstAttribute="bottom" secondItem="ieL-Y4-Du9" secondAttribute="bottom" id="9gQ-JD-VKc"/>
+                                        <constraint firstItem="BGg-an-B1r" firstAttribute="leading" secondItem="wq5-B6-wFI" secondAttribute="leading" id="9qt-bS-dBz"/>
+                                        <constraint firstItem="ieL-Y4-Du9" firstAttribute="leading" secondItem="wq5-B6-wFI" secondAttribute="leading" id="G9R-3f-38V"/>
+                                        <constraint firstItem="BGg-an-B1r" firstAttribute="top" secondItem="wq5-B6-wFI" secondAttribute="top" id="GXl-x4-dxk"/>
+                                        <constraint firstAttribute="bottom" secondItem="BGg-an-B1r" secondAttribute="bottom" id="MBn-km-eoL"/>
+                                        <constraint firstItem="ZyE-jU-jza" firstAttribute="centerX" secondItem="rZ1-uy-uo2" secondAttribute="centerX" id="MWi-RN-Sy4"/>
+                                        <constraint firstItem="ZyE-jU-jza" firstAttribute="top" secondItem="wq5-B6-wFI" secondAttribute="top" constant="111" id="VmY-CD-1bK"/>
+                                        <constraint firstItem="rZ1-uy-uo2" firstAttribute="centerX" secondItem="wq5-B6-wFI" secondAttribute="centerX" id="bTV-Yd-nlA"/>
+                                        <constraint firstAttribute="trailing" secondItem="BGg-an-B1r" secondAttribute="trailing" id="fcl-P2-4hZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ieL-Y4-Du9" secondAttribute="trailing" id="smr-ke-ZFO"/>
+                                        <constraint firstItem="rZ1-uy-uo2" firstAttribute="centerY" secondItem="wq5-B6-wFI" secondAttribute="centerY" id="uWP-rl-M3V"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EmM-ZT-gdZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="41Z-F2-KOo"/>
+                            <constraint firstItem="EmM-ZT-gdZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Cjl-Iu-ir8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EmM-ZT-gdZ" secondAttribute="bottom" id="kbT-mp-cuu"/>
+                            <constraint firstAttribute="trailing" secondItem="EmM-ZT-gdZ" secondAttribute="trailing" id="oK8-mW-vCR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authenticatedLabel" destination="ZyE-jU-jza" id="aJg-3e-oVC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="confused-travolta" width="799" height="770"/>
+    </resources>
+</document>
