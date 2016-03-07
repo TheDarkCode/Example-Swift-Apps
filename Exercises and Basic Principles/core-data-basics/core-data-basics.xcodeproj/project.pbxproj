@@ -13,6 +13,10 @@
 		4D08F9D91C8534AF008140FF /* core_data_basics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D08F9D71C8534AF008140FF /* core_data_basics.xcdatamodeld */; };
 		4D08F9DB1C8534AF008140FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D08F9DA1C8534AF008140FF /* Assets.xcassets */; };
 		4D08F9DE1C8534AF008140FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D08F9DC1C8534AF008140FF /* LaunchScreen.storyboard */; };
+		4DA364681C8E2828000A6B64 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA364661C8E2827000A6B64 /* Recipe+CoreDataProperties.swift */; };
+		4DA364691C8E2828000A6B64 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA364671C8E2827000A6B64 /* Recipe.swift */; };
+		4DA3646B1C8E29B2000A6B64 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3646A1C8E29B2000A6B64 /* RecipeCell.swift */; };
+		4DA3646D1C8E3098000A6B64 /* AddRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3646C1C8E3098000A6B64 /* AddRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		4D08F9DA1C8534AF008140FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D08F9DD1C8534AF008140FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D08F9DF1C8534AF008140FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA364661C8E2827000A6B64 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4DA364671C8E2827000A6B64 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
+		4DA3646A1C8E29B2000A6B64 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		4DA3646C1C8E3098000A6B64 /* AddRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		4D08F9CF1C8534AF008140FF /* core-data-basics */ = {
 			isa = PBXGroup;
 			children = (
+				4DA364651C8E27CF000A6B64 /* Controller */,
+				4DA364641C8E27CA000A6B64 /* View */,
+				4DA364631C8E27C6000A6B64 /* Model */,
 				4D08F9D01C8534AF008140FF /* AppDelegate.swift */,
-				4D08F9D21C8534AF008140FF /* ViewController.swift */,
-				4D08F9D41C8534AF008140FF /* Main.storyboard */,
 				4D08F9DA1C8534AF008140FF /* Assets.xcassets */,
-				4D08F9DC1C8534AF008140FF /* LaunchScreen.storyboard */,
 				4D08F9DF1C8534AF008140FF /* Info.plist */,
 				4D08F9D71C8534AF008140FF /* core_data_basics.xcdatamodeld */,
 			);
 			path = "core-data-basics";
+			sourceTree = "<group>";
+		};
+		4DA364631C8E27C6000A6B64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DA364661C8E2827000A6B64 /* Recipe+CoreDataProperties.swift */,
+				4DA364671C8E2827000A6B64 /* Recipe.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4DA364641C8E27CA000A6B64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D08F9DC1C8534AF008140FF /* LaunchScreen.storyboard */,
+				4D08F9D41C8534AF008140FF /* Main.storyboard */,
+				4DA3646A1C8E29B2000A6B64 /* RecipeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4DA364651C8E27CF000A6B64 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D08F9D21C8534AF008140FF /* ViewController.swift */,
+				4DA3646C1C8E3098000A6B64 /* AddRecipeVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D08F9D31C8534AF008140FF /* ViewController.swift in Sources */,
+				4DA364681C8E2828000A6B64 /* Recipe+CoreDataProperties.swift in Sources */,
+				4DA3646D1C8E3098000A6B64 /* AddRecipeVC.swift in Sources */,
 				4D08F9D11C8534AF008140FF /* AppDelegate.swift in Sources */,
+				4DA3646B1C8E29B2000A6B64 /* RecipeCell.swift in Sources */,
 				4D08F9D91C8534AF008140FF /* core_data_basics.xcdatamodeld in Sources */,
+				4DA364691C8E2828000A6B64 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +330,7 @@
 				4D08F9E41C8534AF008140FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

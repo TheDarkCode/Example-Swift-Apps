@@ -18,21 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ecc-WN-NBb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ecc-WN-NBb">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sampleCell" rowHeight="150" id="Oew-es-Axv">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="150" id="Oew-es-Axv" customClass="RecipeCell" customModule="core_data_basics" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="600" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oew-es-Axv" id="geb-nk-fWU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TPN-w6-qog">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPN-w6-qog">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning Quick-Start Smoothie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-Ej-Heg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Morning Quick-Start Smoothie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-Ej-Heg">
                                                     <rect key="frame" x="8" y="57" width="584" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="1zH-dC-xYi"/>
@@ -55,8 +55,16 @@
                                                 <constraint firstAttribute="bottom" secondItem="TPN-w6-qog" secondAttribute="bottom" id="t46-sW-TYA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeImage" destination="TPN-w6-qog" id="lXa-ie-Im1"/>
+                                            <outlet property="recipeTitle" destination="2Nf-Ej-Heg" id="9tE-1P-9lU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qVB-EP-yxF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GLd-3A-fDb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -75,15 +83,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Ecc-WN-NBb" id="ZH1-EN-5O3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1822" y="903"/>
         </scene>
-        <!--View Controller-->
+        <!--Add RecipeVC-->
         <scene sceneID="IUw-we-uTR">
             <objects>
-                <viewController id="pfW-du-mmj" sceneMemberID="viewController">
+                <viewController id="pfW-du-mmj" customClass="AddRecipeVC" customModule="core_data_basics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="phm-FI-cfo"/>
                         <viewControllerLayoutGuide type="bottom" id="PXB-2E-NAl"/>
@@ -111,15 +122,15 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-D0-GEf">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Steps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-D0-GEf">
                                         <rect key="frame" x="20" y="135" width="560" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="wPF-5p-sY8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c55-Nx-6sH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="c55-Nx-6sH">
                                         <rect key="frame" x="20" y="193" width="560" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="HbN-A5-CnD"/>
@@ -135,15 +146,21 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="createRecipe:" destination="pfW-du-mmj" eventType="touchUpInside" id="qXh-zb-oBs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIo-eu-fns">
                                         <rect key="frame" x="20" y="193" width="560" height="250"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2472737068965517" colorSpace="calibratedRGB"/>
                                         <size key="titleShadowOffset" width="1" height="1"/>
                                         <state key="normal" title="+ Add Image">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addRecipeImage:" destination="pfW-du-mmj" eventType="touchUpInside" id="1nU-YL-C4g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -179,6 +196,14 @@
                             <constraint firstItem="aFQ-qh-t1g" firstAttribute="top" secondItem="phm-FI-cfo" secondAttribute="bottom" id="tA2-sh-u5h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addImageButton" destination="tIo-eu-fns" id="PsY-PU-J1Y"/>
+                        <outlet property="addRecipeButton" destination="mCR-jf-40P" id="N92-uv-uOb"/>
+                        <outlet property="recipeImage" destination="c55-Nx-6sH" id="yyw-eB-gGu"/>
+                        <outlet property="recipeIngredients" destination="K64-Xa-1oG" id="yM7-G1-MMd"/>
+                        <outlet property="recipeSteps" destination="QsI-D0-GEf" id="fwI-If-qsh"/>
+                        <outlet property="recipeTitle" destination="Zb6-mK-mf4" id="i6h-Ei-FHy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SxW-g3-h1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,7 +212,7 @@
         <!--Navigation Controller-->
         <scene sceneID="tr0-Z7-tHb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="acc-bd-WCe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="acc-bd-WCe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="rnK-0r-qO2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -208,4 +233,7 @@
             <point key="canvasLocation" x="1010" y="1563"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="food" width="1200" height="692"/>
+    </resources>
 </document>
