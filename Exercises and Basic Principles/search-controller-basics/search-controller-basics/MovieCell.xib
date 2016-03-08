@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="140" id="KGk-i7-Jjw" customClass="MovieCell" customModule="search_controller_basics" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="448" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="i73-tC-UiX">
+                        <rect key="frame" x="0.0" y="0.0" width="448" height="139"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDJ-z5-vpk">
+                                <rect key="frame" x="0.0" y="0.0" width="217" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="8eZ-yD-uk9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8eZ-yD-uk9"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wyC-T7-z9z">
+                                <rect key="frame" x="232" y="0.0" width="216" height="139"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gUg-DY-ohh">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="37"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Og8-96-JD0">
+                                                <rect key="frame" x="0.0" y="0.0" width="216" height="37"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-Dy-PQp">
+                                        <rect key="frame" x="0.0" y="42" width="216" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gc2-d1-d7L">
+                                                <rect key="frame" x="0.0" y="0.0" width="216" height="31"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YYH-09-Sb5">
+                                        <rect key="frame" x="0.0" y="78" width="216" height="61"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POx-pz-giz">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="61"/>
+                                                <state key="normal" title="Details">
+                                                    <color key="titleColor" red="1" green="0.58563569429999995" blue="0.19987127909999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSP-4x-ubr">
+                                                <rect key="frame" x="108" y="0.0" width="108" height="61"/>
+                                                <state key="normal" title="IMDB">
+                                                    <color key="titleColor" red="1" green="0.1025861391" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="gUg-DY-ohh" secondAttribute="trailing" id="4dk-Dx-ydN"/>
+                                    <constraint firstItem="YYH-09-Sb5" firstAttribute="leading" secondItem="wyC-T7-z9z" secondAttribute="leading" id="Jmi-6N-wS1"/>
+                                    <constraint firstAttribute="trailing" secondItem="YYH-09-Sb5" secondAttribute="trailing" id="M02-TP-cH4"/>
+                                    <constraint firstItem="5fO-Dy-PQp" firstAttribute="leading" secondItem="wyC-T7-z9z" secondAttribute="leadingMargin" id="OYY-oJ-qVc"/>
+                                    <constraint firstItem="YYH-09-Sb5" firstAttribute="top" secondItem="5fO-Dy-PQp" secondAttribute="bottom" id="RqS-vq-Fug"/>
+                                    <constraint firstItem="gUg-DY-ohh" firstAttribute="top" secondItem="wyC-T7-z9z" secondAttribute="topMargin" id="UH6-od-Tmf"/>
+                                    <constraint firstAttribute="bottom" secondItem="YYH-09-Sb5" secondAttribute="bottom" id="Yh3-ft-HgH"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="5fO-Dy-PQp" secondAttribute="trailing" id="dhl-YY-JoM"/>
+                                    <constraint firstItem="gUg-DY-ohh" firstAttribute="leading" secondItem="wyC-T7-z9z" secondAttribute="leadingMargin" id="nA6-DW-qgQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wyC-T7-z9z" firstAttribute="leading" secondItem="BDJ-z5-vpk" secondAttribute="trailing" id="07X-7n-zzv"/>
+                            <constraint firstAttribute="bottom" secondItem="wyC-T7-z9z" secondAttribute="bottom" id="DC0-p5-puO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="BDJ-z5-vpk" secondAttribute="bottom" id="FcO-HK-92x"/>
+                            <constraint firstItem="BDJ-z5-vpk" firstAttribute="top" secondItem="i73-tC-UiX" secondAttribute="topMargin" id="Oey-O1-Llm"/>
+                            <constraint firstItem="BDJ-z5-vpk" firstAttribute="leading" secondItem="i73-tC-UiX" secondAttribute="leadingMargin" id="Qy1-IG-cvA"/>
+                            <constraint firstItem="wyC-T7-z9z" firstAttribute="top" secondItem="i73-tC-UiX" secondAttribute="top" id="q7O-ND-q7E"/>
+                            <constraint firstItem="wyC-T7-z9z" firstAttribute="leading" secondItem="BDJ-z5-vpk" secondAttribute="trailing" id="q8K-aV-aHH"/>
+                            <constraint firstAttribute="trailing" secondItem="wyC-T7-z9z" secondAttribute="trailing" id="qHx-R1-Krb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="07X-7n-zzv"/>
+                                <exclude reference="q8K-aV-aHH"/>
+                            </mask>
+                        </variation>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="i73-tC-UiX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZCg-2D-gaD"/>
+                    <constraint firstAttribute="bottom" secondItem="i73-tC-UiX" secondAttribute="bottom" id="bAJ-ff-Ugy"/>
+                    <constraint firstAttribute="trailing" secondItem="i73-tC-UiX" secondAttribute="trailing" id="fho-4j-eYO"/>
+                    <constraint firstItem="i73-tC-UiX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="i9F-PO-xdN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="coverArt" destination="BDJ-z5-vpk" id="2dc-CH-tnP"/>
+                <outlet property="detailsButton" destination="POx-pz-giz" id="ZCT-C9-R48"/>
+                <outlet property="imdbButton" destination="kSP-4x-ubr" id="B6x-me-jyi"/>
+                <outlet property="movieDescription" destination="Gc2-d1-d7L" id="gfY-F4-3iz"/>
+                <outlet property="movieTitle" destination="Og8-96-JD0" id="lkR-a9-GRs"/>
+            </connections>
+            <point key="canvasLocation" x="1043" y="811"/>
+        </tableViewCell>
+    </objects>
+</document>
