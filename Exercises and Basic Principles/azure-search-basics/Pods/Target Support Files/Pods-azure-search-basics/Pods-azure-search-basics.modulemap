@@ -1,0 +1,6 @@
+framework module Pods_azure_search_basics {
+  umbrella header "Pods-azure-search-basics-umbrella.h"
+
+  export *
+  module * { export * }
+}

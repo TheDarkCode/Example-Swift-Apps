@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DB6AFDE1C91726F00278E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6AFDD1C91726F00278E09 /* AppDelegate.swift */; };
+		4DB6AFE01C91726F00278E09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6AFDF1C91726F00278E09 /* ViewController.swift */; };
+		4DB6AFE31C91726F00278E09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6AFE11C91726F00278E09 /* Main.storyboard */; };
+		4DB6AFE61C91726F00278E09 /* azure_search_basics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6AFE41C91726F00278E09 /* azure_search_basics.xcdatamodeld */; };
+		4DB6AFE81C91726F00278E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6AFE71C91726F00278E09 /* Assets.xcassets */; };
+		4DB6AFEB1C91726F00278E09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6AFE91C91726F00278E09 /* LaunchScreen.storyboard */; };
+		4DB6AFF61C91726F00278E09 /* azure_search_basicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6AFF51C91726F00278E09 /* azure_search_basicsTests.swift */; };
+		4DB6B0011C91726F00278E09 /* azure_search_basicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6B0001C91726F00278E09 /* azure_search_basicsUITests.swift */; };
+		4DB6B0111C9172CB00278E09 /* AZResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6B0101C9172CB00278E09 /* AZResults.swift */; };
+		4DB6B0131C91731A00278E09 /* AZResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6B0121C91731A00278E09 /* AZResult.swift */; };
+		4DB6B0151C9173C000278E09 /* AZLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6B0141C9173C000278E09 /* AZLocation.swift */; };
+		4DB6B0171C91759A00278E09 /* CRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6B0161C91759A00278E09 /* CRS.swift */; };
+		4DB6B0191C917AB400278E09 /* TrailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6B0181C917AB400278E09 /* TrailResult.swift */; };
+		4DB6B0431C91810900278E09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6B0421C91810900278E09 /* Constants.swift */; };
+		E21475AABF124E2A559EE776 /* Pods_azure_search_basics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6D23C3F269D3AD0AFC2E62 /* Pods_azure_search_basics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DB6AFF21C91726F00278E09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB6AFD21C91726F00278E09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DB6AFD91C91726F00278E09;
+			remoteInfo = "azure-search-basics";
+		};
+		4DB6AFFD1C91726F00278E09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB6AFD21C91726F00278E09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DB6AFD91C91726F00278E09;
+			remoteInfo = "azure-search-basics";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C6D23C3F269D3AD0AFC2E62 /* Pods_azure_search_basics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_azure_search_basics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB6AFDA1C91726F00278E09 /* azure-search-basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "azure-search-basics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB6AFDD1C91726F00278E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4DB6AFDF1C91726F00278E09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DB6AFE21C91726F00278E09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DB6AFE51C91726F00278E09 /* azure_search_basics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = azure_search_basics.xcdatamodel; sourceTree = "<group>"; };
+		4DB6AFE71C91726F00278E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DB6AFEA1C91726F00278E09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4DB6AFEC1C91726F00278E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB6AFF11C91726F00278E09 /* azure-search-basicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "azure-search-basicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB6AFF51C91726F00278E09 /* azure_search_basicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = azure_search_basicsTests.swift; sourceTree = "<group>"; };
+		4DB6AFF71C91726F00278E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB6AFFC1C91726F00278E09 /* azure-search-basicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "azure-search-basicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB6B0001C91726F00278E09 /* azure_search_basicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = azure_search_basicsUITests.swift; sourceTree = "<group>"; };
+		4DB6B0021C91726F00278E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB6B0101C9172CB00278E09 /* AZResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZResults.swift; sourceTree = "<group>"; };
+		4DB6B0121C91731A00278E09 /* AZResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZResult.swift; sourceTree = "<group>"; };
+		4DB6B0141C9173C000278E09 /* AZLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZLocation.swift; sourceTree = "<group>"; };
+		4DB6B0161C91759A00278E09 /* CRS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRS.swift; sourceTree = "<group>"; };
+		4DB6B0181C917AB400278E09 /* TrailResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailResult.swift; sourceTree = "<group>"; };
+		4DB6B0421C91810900278E09 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C76EFB8D0F382C285B4452D2 /* Pods-azure-search-basics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azure-search-basics.release.xcconfig"; path = "Pods/Target Support Files/Pods-azure-search-basics/Pods-azure-search-basics.release.xcconfig"; sourceTree = "<group>"; };
+		DA2CFBF0E49269C350092F54 /* Pods-azure-search-basics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azure-search-basics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-azure-search-basics/Pods-azure-search-basics.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DB6AFD71C91726F00278E09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E21475AABF124E2A559EE776 /* Pods_azure_search_basics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB6AFEE1C91726F00278E09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB6AFF91C91726F00278E09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		009D023258C122764806D4C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA2CFBF0E49269C350092F54 /* Pods-azure-search-basics.debug.xcconfig */,
+				C76EFB8D0F382C285B4452D2 /* Pods-azure-search-basics.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4AE98D49456B5DDD3C82C507 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C6D23C3F269D3AD0AFC2E62 /* Pods_azure_search_basics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DB6AFD11C91726F00278E09 = {
+			isa = PBXGroup;
+			children = (
+				4DB6AFDC1C91726F00278E09 /* azure-search-basics */,
+				4DB6AFF41C91726F00278E09 /* azure-search-basicsTests */,
+				4DB6AFFF1C91726F00278E09 /* azure-search-basicsUITests */,
+				4DB6AFDB1C91726F00278E09 /* Products */,
+				009D023258C122764806D4C6 /* Pods */,
+				4AE98D49456B5DDD3C82C507 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4DB6AFDB1C91726F00278E09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6AFDA1C91726F00278E09 /* azure-search-basics.app */,
+				4DB6AFF11C91726F00278E09 /* azure-search-basicsTests.xctest */,
+				4DB6AFFC1C91726F00278E09 /* azure-search-basicsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB6AFDC1C91726F00278E09 /* azure-search-basics */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6B0411C9180F600278E09 /* Data */,
+				4DB6B0401C9180DA00278E09 /* Controllers */,
+				4DB6B03F1C9180CE00278E09 /* Views */,
+				4DB6B03E1C9180C300278E09 /* Models */,
+				4DB6B00E1C91727800278E09 /* Azure Search */,
+				4DB6AFDD1C91726F00278E09 /* AppDelegate.swift */,
+				4DB6AFE71C91726F00278E09 /* Assets.xcassets */,
+				4DB6AFEC1C91726F00278E09 /* Info.plist */,
+				4DB6AFE41C91726F00278E09 /* azure_search_basics.xcdatamodeld */,
+			);
+			path = "azure-search-basics";
+			sourceTree = "<group>";
+		};
+		4DB6AFF41C91726F00278E09 /* azure-search-basicsTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6AFF51C91726F00278E09 /* azure_search_basicsTests.swift */,
+				4DB6AFF71C91726F00278E09 /* Info.plist */,
+			);
+			path = "azure-search-basicsTests";
+			sourceTree = "<group>";
+		};
+		4DB6AFFF1C91726F00278E09 /* azure-search-basicsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6B0001C91726F00278E09 /* azure_search_basicsUITests.swift */,
+				4DB6B0021C91726F00278E09 /* Info.plist */,
+			);
+			path = "azure-search-basicsUITests";
+			sourceTree = "<group>";
+		};
+		4DB6B00E1C91727800278E09 /* Azure Search */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6B0101C9172CB00278E09 /* AZResults.swift */,
+				4DB6B0121C91731A00278E09 /* AZResult.swift */,
+				4DB6B0141C9173C000278E09 /* AZLocation.swift */,
+				4DB6B0161C91759A00278E09 /* CRS.swift */,
+			);
+			name = "Azure Search";
+			sourceTree = "<group>";
+		};
+		4DB6B03E1C9180C300278E09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6B0181C917AB400278E09 /* TrailResult.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4DB6B03F1C9180CE00278E09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6AFE11C91726F00278E09 /* Main.storyboard */,
+				4DB6AFE91C91726F00278E09 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4DB6B0401C9180DA00278E09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6AFDF1C91726F00278E09 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4DB6B0411C9180F600278E09 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6B0421C91810900278E09 /* Constants.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DB6AFD91C91726F00278E09 /* azure-search-basics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB6B0051C91726F00278E09 /* Build configuration list for PBXNativeTarget "azure-search-basics" */;
+			buildPhases = (
+				EB4C7808AD79E3781BE8EF8B /* Check Pods Manifest.lock */,
+				4DB6AFD61C91726F00278E09 /* Sources */,
+				4DB6AFD71C91726F00278E09 /* Frameworks */,
+				4DB6AFD81C91726F00278E09 /* Resources */,
+				2FDA20A79DD31FCA5F83DA5E /* Embed Pods Frameworks */,
+				08200DDBD276FE91B8D476FA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "azure-search-basics";
+			productName = "azure-search-basics";
+			productReference = 4DB6AFDA1C91726F00278E09 /* azure-search-basics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DB6AFF01C91726F00278E09 /* azure-search-basicsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB6B0081C91726F00278E09 /* Build configuration list for PBXNativeTarget "azure-search-basicsTests" */;
+			buildPhases = (
+				4DB6AFED1C91726F00278E09 /* Sources */,
+				4DB6AFEE1C91726F00278E09 /* Frameworks */,
+				4DB6AFEF1C91726F00278E09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DB6AFF31C91726F00278E09 /* PBXTargetDependency */,
+			);
+			name = "azure-search-basicsTests";
+			productName = "azure-search-basicsTests";
+			productReference = 4DB6AFF11C91726F00278E09 /* azure-search-basicsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4DB6AFFB1C91726F00278E09 /* azure-search-basicsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB6B00B1C91726F00278E09 /* Build configuration list for PBXNativeTarget "azure-search-basicsUITests" */;
+			buildPhases = (
+				4DB6AFF81C91726F00278E09 /* Sources */,
+				4DB6AFF91C91726F00278E09 /* Frameworks */,
+				4DB6AFFA1C91726F00278E09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DB6AFFE1C91726F00278E09 /* PBXTargetDependency */,
+			);
+			name = "azure-search-basicsUITests";
+			productName = "azure-search-basicsUITests";
+			productReference = 4DB6AFFC1C91726F00278E09 /* azure-search-basicsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DB6AFD21C91726F00278E09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = dryverless;
+				TargetAttributes = {
+					4DB6AFD91C91726F00278E09 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					4DB6AFF01C91726F00278E09 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 4DB6AFD91C91726F00278E09;
+					};
+					4DB6AFFB1C91726F00278E09 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 4DB6AFD91C91726F00278E09;
+					};
+				};
+			};
+			buildConfigurationList = 4DB6AFD51C91726F00278E09 /* Build configuration list for PBXProject "azure-search-basics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DB6AFD11C91726F00278E09;
+			productRefGroup = 4DB6AFDB1C91726F00278E09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DB6AFD91C91726F00278E09 /* azure-search-basics */,
+				4DB6AFF01C91726F00278E09 /* azure-search-basicsTests */,
+				4DB6AFFB1C91726F00278E09 /* azure-search-basicsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DB6AFD81C91726F00278E09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB6AFEB1C91726F00278E09 /* LaunchScreen.storyboard in Resources */,
+				4DB6AFE81C91726F00278E09 /* Assets.xcassets in Resources */,
+				4DB6AFE31C91726F00278E09 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB6AFEF1C91726F00278E09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB6AFFA1C91726F00278E09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08200DDBD276FE91B8D476FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-azure-search-basics/Pods-azure-search-basics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FDA20A79DD31FCA5F83DA5E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-azure-search-basics/Pods-azure-search-basics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB4C7808AD79E3781BE8EF8B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DB6AFD61C91726F00278E09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB6B0171C91759A00278E09 /* CRS.swift in Sources */,
+				4DB6AFE01C91726F00278E09 /* ViewController.swift in Sources */,
+				4DB6AFE61C91726F00278E09 /* azure_search_basics.xcdatamodeld in Sources */,
+				4DB6B0111C9172CB00278E09 /* AZResults.swift in Sources */,
+				4DB6B0131C91731A00278E09 /* AZResult.swift in Sources */,
+				4DB6AFDE1C91726F00278E09 /* AppDelegate.swift in Sources */,
+				4DB6B0151C9173C000278E09 /* AZLocation.swift in Sources */,
+				4DB6B0191C917AB400278E09 /* TrailResult.swift in Sources */,
+				4DB6B0431C91810900278E09 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB6AFED1C91726F00278E09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB6AFF61C91726F00278E09 /* azure_search_basicsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB6AFF81C91726F00278E09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB6B0011C91726F00278E09 /* azure_search_basicsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DB6AFF31C91726F00278E09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DB6AFD91C91726F00278E09 /* azure-search-basics */;
+			targetProxy = 4DB6AFF21C91726F00278E09 /* PBXContainerItemProxy */;
+		};
+		4DB6AFFE1C91726F00278E09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DB6AFD91C91726F00278E09 /* azure-search-basics */;
+			targetProxy = 4DB6AFFD1C91726F00278E09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4DB6AFE11C91726F00278E09 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DB6AFE21C91726F00278E09 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4DB6AFE91C91726F00278E09 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DB6AFEA1C91726F00278E09 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DB6B0031C91726F00278E09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DB6B0041C91726F00278E09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DB6B0061C91726F00278E09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA2CFBF0E49269C350092F54 /* Pods-azure-search-basics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "azure-search-basics/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dryverless.azure-search-basics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4DB6B0071C91726F00278E09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C76EFB8D0F382C285B4452D2 /* Pods-azure-search-basics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "azure-search-basics/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dryverless.azure-search-basics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4DB6B0091C91726F00278E09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "azure-search-basicsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dryverless.azure-search-basicsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/azure-search-basics.app/azure-search-basics";
+			};
+			name = Debug;
+		};
+		4DB6B00A1C91726F00278E09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "azure-search-basicsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dryverless.azure-search-basicsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/azure-search-basics.app/azure-search-basics";
+			};
+			name = Release;
+		};
+		4DB6B00C1C91726F00278E09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "azure-search-basicsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dryverless.azure-search-basicsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "azure-search-basics";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		4DB6B00D1C91726F00278E09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "azure-search-basicsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dryverless.azure-search-basicsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "azure-search-basics";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DB6AFD51C91726F00278E09 /* Build configuration list for PBXProject "azure-search-basics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB6B0031C91726F00278E09 /* Debug */,
+				4DB6B0041C91726F00278E09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DB6B0051C91726F00278E09 /* Build configuration list for PBXNativeTarget "azure-search-basics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB6B0061C91726F00278E09 /* Debug */,
+				4DB6B0071C91726F00278E09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DB6B0081C91726F00278E09 /* Build configuration list for PBXNativeTarget "azure-search-basicsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB6B0091C91726F00278E09 /* Debug */,
+				4DB6B00A1C91726F00278E09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DB6B00B1C91726F00278E09 /* Build configuration list for PBXNativeTarget "azure-search-basicsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB6B00C1C91726F00278E09 /* Debug */,
+				4DB6B00D1C91726F00278E09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4DB6AFE41C91726F00278E09 /* azure_search_basics.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4DB6AFE51C91726F00278E09 /* azure_search_basics.xcdatamodel */,
+			);
+			currentVersion = 4DB6AFE51C91726F00278E09 /* azure_search_basics.xcdatamodel */;
+			path = azure_search_basics.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4DB6AFD21C91726F00278E09 /* Project object */;
+}
