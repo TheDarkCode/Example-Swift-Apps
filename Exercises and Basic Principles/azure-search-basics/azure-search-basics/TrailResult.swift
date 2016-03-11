@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TrailResult: AZResult {
+class TrailResult: AZSResult {
     
     // Structure ::
     // @search.score - superclass
@@ -19,7 +19,7 @@ class TrailResult: AZResult {
     // location - superclass
     
     private var _name: String?
-    private var _location: AZLocation?
+    private var _location: AZSLocation?
     private var _county: String!
     private var _elevation: Int!
     
@@ -37,11 +37,11 @@ class TrailResult: AZResult {
         
     }
     
-    var location: AZLocation {
+    var location: AZSLocation {
         
         get {
             
-            if let resultLocation: AZLocation = _location ?? AZLocation() {
+            if let resultLocation: AZSLocation = _location ?? AZSLocation() {
                 
                 return resultLocation
                 
@@ -84,7 +84,7 @@ class TrailResult: AZResult {
         self.init(score: score, id: id)
         
         self._name = name
-        self._location = AZLocation(coords: location)
+        self._location = AZSLocation(coords: location)
         self._county = county
         self._elevation = elevation
         

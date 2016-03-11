@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AZLocation: NSObject {
+class AZSLocation: NSObject {
     
     private var _type: String = "Point" // "Point"
     private var _coordinates: [Double]! // 0.0, 0.0

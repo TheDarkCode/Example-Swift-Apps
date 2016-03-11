@@ -1,5 +1,5 @@
 //
-//  AZResults.swift
+//  AZSResults.swift
 //  azure-search-basics
 //
 //  Created by Mark Hamilton on 3/10/16.
@@ -13,7 +13,7 @@ import Foundation
 // "value": [AZResult]
 // "@odata.nextLink": String
 
-class AZResults {
+class AZSResults {
     
     private var _context: String!
     private var _value: [AnyObject]? // Default is AZResult but you could make any type of custom result class.

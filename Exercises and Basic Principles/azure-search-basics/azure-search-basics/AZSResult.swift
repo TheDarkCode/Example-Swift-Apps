@@ -1,5 +1,5 @@
 //
-//  AZResult.swift
+//  AZSResult.swift
 //  azure-search-basics
 //
 //  Created by Mark Hamilton on 3/10/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AZResult: NSObject {
+class AZSResult: NSObject {
     
     private var _searchScore: Double!
     private var _id: String!

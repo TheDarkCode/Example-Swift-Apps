@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lJL-nV-6Vf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Azure Search Basics-->
+        <scene sceneID="u5r-3Y-2Xa">
+            <objects>
+                <tableViewController title="Azure Search Basics" id="3Y3-eN-1ed" customClass="AZSTableVC" customModule="azure_search_basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TMO-in-MXa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AZSResultCell" id="7jv-K1-3vt" customClass="AZSResultCell" customModule="azure_search_basics" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7jv-K1-3vt" id="KOa-cR-8Zk">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Y3-eN-1ed" id="Z8L-f9-Nh4"/>
+                            <outlet property="delegate" destination="3Y3-eN-1ed" id="7Rq-MA-cJ5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Azure Search Basics" id="bPT-zA-36D">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="2JZ-Jg-TKB">
+                            <connections>
+                                <segue destination="lIU-qo-0Ya" kind="show" id="5Pa-aR-rk6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqW-Vh-Qc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="529"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="53a-CN-KQO">
+            <objects>
+                <viewController id="lIU-qo-0Ya" customClass="AZSDetailVC" customModule="azure_search_basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HqD-p6-uNS"/>
+                        <viewControllerLayoutGuide type="bottom" id="qRH-bd-Red"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iDT-RV-khm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tIq-wW-yV7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="232"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OH8-K8-6FE">
+                                <rect key="frame" x="0.0" y="229" width="600" height="371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qRH-bd-Red" firstAttribute="top" secondItem="tIq-wW-yV7" secondAttribute="bottom" constant="368" id="73D-r4-ILI"/>
+                            <constraint firstItem="tIq-wW-yV7" firstAttribute="leading" secondItem="iDT-RV-khm" secondAttribute="leading" id="BOC-BZ-LIb"/>
+                            <constraint firstItem="OH8-K8-6FE" firstAttribute="bottom" secondItem="qRH-bd-Red" secondAttribute="top" id="KSn-Qr-6Q9"/>
+                            <constraint firstItem="tIq-wW-yV7" firstAttribute="top" secondItem="iDT-RV-khm" secondAttribute="top" id="MYN-ji-FLG"/>
+                            <constraint firstItem="OH8-K8-6FE" firstAttribute="trailing" secondItem="tIq-wW-yV7" secondAttribute="trailing" id="hnr-uf-Zz2"/>
+                            <constraint firstItem="OH8-K8-6FE" firstAttribute="top" secondItem="HqD-p6-uNS" secondAttribute="bottom" constant="209" id="rqr-SG-2dl"/>
+                            <constraint firstAttribute="trailing" secondItem="OH8-K8-6FE" secondAttribute="trailing" id="wwH-L3-4nv"/>
+                            <constraint firstItem="tIq-wW-yV7" firstAttribute="leading" secondItem="OH8-K8-6FE" secondAttribute="leading" id="yMV-6Z-quW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7j-oI-SFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816" y="529"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ISm-bb-2dS">
+            <objects>
+                <navigationController id="lJL-nV-6Vf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xsj-jH-UOe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Y3-eN-1ed" kind="relationship" relationship="rootViewController" id="Wlr-YY-gNY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkE-Q0-85N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="529"/>
+        </scene>
+    </scenes>
+</document>
