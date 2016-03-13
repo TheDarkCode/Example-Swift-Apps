@@ -22,7 +22,11 @@ extension ViewController: UIViewControllerPreviewingDelegate {
         
         // Obtain the index path and the cell that was pressed.
         
-        guard let indexPath = collectionView.indexPathForItemAtPoint(location),
+        var updatedLocation = location
+        
+        updatedLocation.y -= 105.0
+        
+        guard let indexPath = collectionView.indexPathForItemAtPoint(updatedLocation),
             
             cell = collectionView.cellForItemAtIndexPath(indexPath) else { return nil }
         

@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-pokedex-exercise/Alamofire.framework"
+  install_framework "Pods-pokedex-exercise/FLEX.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-pokedex-exercise/Alamofire.framework"

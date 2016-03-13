@@ -8,6 +8,7 @@ use_frameworks!
 target 'pokedex-exercise' do
 
   pod 'Alamofire', '~> 3.0'
+  pod 'FLEX', '~> 2.0', :configurations => ['Debug']
 
 end
 

@@ -205,7 +205,7 @@
         <!--Pokemon DetailVC-->
         <scene sceneID="oqB-GJ-Ag1">
             <objects>
-                <viewController id="Abu-eZ-YgP" customClass="PokemonDetailVC" customModule="pokedex_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PokemonDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Abu-eZ-YgP" customClass="PokemonDetailVC" customModule="pokedex_exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="izR-OG-EQg"/>
                         <viewControllerLayoutGuide type="bottom" id="cVz-HS-SJV"/>
