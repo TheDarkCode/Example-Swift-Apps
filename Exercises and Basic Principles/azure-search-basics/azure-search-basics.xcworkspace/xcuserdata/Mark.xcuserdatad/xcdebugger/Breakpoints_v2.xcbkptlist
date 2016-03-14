@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "azure-search-basics/HomeGeoSearchVC.swift"
+            timestampString = "479675665.31504"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "HomeGeoSearchVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "azure_search_basics.HomeGeoSearchVC.init (azure_search_basics.HomeGeoSearchVC.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; azure_search_basics.HomeGeoSearchVC"
+                  moduleName = "azure-search-basics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mark/Desktop/Udemy/SwiftCourse/azure-search-basics/azure-search-basics/HomeGeoSearchVC.swift"
+                  timestampString = "479676392.651176"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "azure_search_basics.HomeGeoSearchVC.init (azure_search_basics.HomeGeoSearchVC.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;azure_search_basics.HomeGeoSearchVC&gt;"
+                  moduleName = "azure-search-basics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mark/Desktop/Udemy/SwiftCourse/azure-search-basics/azure-search-basics/HomeGeoSearchVC.swift"
+                  timestampString = "479676392.651327"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

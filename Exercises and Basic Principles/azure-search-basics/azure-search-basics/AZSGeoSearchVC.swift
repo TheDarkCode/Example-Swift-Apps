@@ -9,14 +9,15 @@
 import UIKit
 import MapKit
 
-class AZSGeoSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
+class AZSGeoSearchVC: AZSViewController, GeoSearch, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var map: MKMapView!
     
     let locationManager = CLLocationManager()
     
-    let regionRadius: CLLocationDistance = 1000
+    var regionRadius: CLLocationDistance = 1000
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +54,32 @@ class AZSGeoSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    // MARK: - GeoSearch Protocol Methods
+    
+    func locateWithCoordinates(Longitude lon: Double, Latitude lat: Double, locationTitle title: String?) {
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            
+            let position = CLLocationCoordinate2DMake(lat, lon)
+            self.centerMapOnCoordinate2D(position)
+            
+        }
+        
+    }
+    
     
     // MARK: - Map and Annotations
     
     func centerMapOnLocation(location: CLLocation) {
         
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2, regionRadius * 2)
+        map.setRegion(coordinateRegion, animated: true)
+        
+    }
+    
+    func centerMapOnCoordinate2D(location: CLLocationCoordinate2D) {
+        
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location, regionRadius * 2, regionRadius * 2)
         map.setRegion(coordinateRegion, animated: true)
         
     }
@@ -75,7 +96,7 @@ class AZSGeoSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
-        if annotation.isKindOfClass(AZSMapAnnotation) {
+        if annotation.isKindOfClass(MKAnnotation) {
             
             let annoView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Default")
             

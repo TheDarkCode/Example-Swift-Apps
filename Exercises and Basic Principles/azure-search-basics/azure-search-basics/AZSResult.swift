@@ -8,44 +8,14 @@
 
 import Foundation
 
-class AZSResult: NSObject {
+protocol AZSResult {
     
-    private var _searchScore: Double!
-    private var _id: String!
-    
-    var searchScore: Double {
-        
-        get {
-            
-            return _searchScore
-            
-        }
-        
-    }
-    
-    var id: String {
-        
-        get {
-            
-            return _id
-            
-        }
-        
-    }
+    var _searchScore: Double { get set }
+    var _id: String { get set }
     
     
-    init(score: Double, id: String) {
-        
-        
-        self._searchScore = score
-        self._id = id
-        
-    }
+    init(score: Double, id: String)
     
-    override init() {
-    
-        super.init()
-        
-    }
+    init?()
     
 }

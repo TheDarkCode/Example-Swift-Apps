@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class AZSTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
-
+    
     var searchResults: AZSResults?
     var suggestedSearchResults = [AnyObject]() // AZSSuggestions()
     
@@ -21,7 +21,10 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //self.tableView.delegate = self
+        //self.tableView.dataSource = self
+        
         performSearch("")
         
         
@@ -200,15 +203,13 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDel
         
     }
     
-    func performSearchForTopResult(searchText: String) -> AZSResult {
+    func performSearchForTopResult(searchText: String) {
         
         // perform search
         
         // set results to temporary var upon completion
         
         // grab ["value"][0] and return
-        
-        return AZSResult()
         
     }
     

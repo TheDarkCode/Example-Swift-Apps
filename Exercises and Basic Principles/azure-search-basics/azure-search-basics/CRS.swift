@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CRS: NSObject {
+struct CRS {
     
     private var _type: String = "name"
     private var _properties: Dictionary<String,AnyObject>!
@@ -33,17 +33,14 @@ class CRS: NSObject {
         
     }
     
-    convenience init(name: String) {
-        
-        self.init()
-        
+    init(name: String) {
+    
         self._properties.updateValue(name, forKey: "name")
         
     }
     
-    override init() {
-        
-        super.init()
+    init() {
+
         self._properties.updateValue("EPSG:4326", forKey: "name")
         
     }

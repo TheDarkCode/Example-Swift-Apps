@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AZSDetailVC: UIViewController {
+class AZSDetailVC: AZSViewController {
 
     var result: AnyObject?
     
