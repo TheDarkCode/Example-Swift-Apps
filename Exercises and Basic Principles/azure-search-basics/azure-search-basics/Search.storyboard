@@ -43,7 +43,7 @@
         <!--DetailVC-->
         <scene sceneID="53a-CN-KQO">
             <objects>
-                <viewController id="lIU-qo-0Ya" customClass="AZSDetailVC" customModule="azure_search_basics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AZSDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lIU-qo-0Ya" customClass="AZSDetailVC" customModule="azure_search_basics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HqD-p6-uNS"/>
                         <viewControllerLayoutGuide type="bottom" id="qRH-bd-Red"/>
@@ -55,7 +55,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tIq-wW-yV7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="232"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OH8-K8-6FE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OH8-K8-6FE">
                                 <rect key="frame" x="0.0" y="229" width="600" height="371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -84,6 +84,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xsj-jH-UOe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="3Y3-eN-1ed" kind="relationship" relationship="rootViewController" id="Wlr-YY-gNY"/>

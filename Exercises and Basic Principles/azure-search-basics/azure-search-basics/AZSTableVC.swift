@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import Alamofire
 
-class AZSTableVC: UITableViewController, UISearchResultsUpdating {
+class AZSTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
 
-    var searchResults = [AnyObject]()
-    var filteredSearchResults = [AnyObject]()
+    var searchResults: AZSResults?
+    var suggestedSearchResults = [AnyObject]() // AZSSuggestions()
     
     var alertController: UIAlertController?
     var searchController = UISearchController()
     
+    var searchActive: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        performSearch("")
+        
         
         // Check for force touch feature, and add force touch/previewing capability.
         
@@ -55,8 +60,8 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating {
         self.loadSearchController()
         
         // Register Custom Cell
-        let nib = UINib(nibName: "AZSResultCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "AZSResultCell")
+//        let nib = UINib(nibName: "AZSResultCell", bundle: nil)
+//        tableView.registerNib(nib, forCellReuseIdentifier: "AZSResultCell")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -71,8 +76,6 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating {
         
         //clearsSelectionOnViewWillAppear = splitViewController!.collapsed
         
-        
-        
         super.viewWillAppear(animated)
         
     }
@@ -80,8 +83,6 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating {
     override func viewDidAppear(animated: Bool) {
         
         super.viewDidAppear(animated)
-        
-        
         
         // Present the alert if necessary.
         
@@ -105,17 +106,25 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func prefersStatusBarHidden() -> Bool {
+        
+        return true
+    
+    }
     
     // MARK: - Search Controller Configuration
     
     func loadSearchController() {
         
         self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController.searchBar.delegate = self
         self.searchController.searchResultsUpdater = self
         
         self.searchController.dimsBackgroundDuringPresentation = false
+        
         self.searchController.searchBar.sizeToFit()
+        self.searchController.searchBar.returnKeyType = UIReturnKeyType.Done
         
         self.tableView.tableHeaderView = self.searchController.searchBar
         
@@ -123,24 +132,98 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating {
         
     }
     
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchController.searchBar.text == nil || searchController.searchBar.text == "" {
+            
+            searchActive = false
+            view.endEditing(true)
+            
+            tableView.reloadData()
+            
+            
+        } else {
+            
+            searchActive = true
+            
+            performSearch(searchText)
+            
+            tableView.reloadData()
+            
+        }
+        
+    }
+    
     func updateSearchResultsForSearchController(searchCtrl: UISearchController) {
         
-        self.filteredSearchResults.removeAll(keepCapacity: false)
+        self.suggestedSearchResults.removeAll(keepCapacity: false)
         
         self.tableView.reloadData()
+        
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        
+        view.endEditing(true)
+        
+    }
+    
+    
+    func performSearch(searchText: String) {
+        
+        let _searchUrl = "\(BASE_URL)\(searchText)"
+        
+        let url = NSURL(string: _searchUrl)!
+        
+        Alamofire.request(.GET, url, headers: SEARCH_HEADERS).responseJSON { response in
+            
+            let result = response.result
+            
+            if let results = result.value as? Dictionary<String, AnyObject> {
+                
+                print(results.debugDescription)
+                
+                self.searchResults = AZSResults(results: results)
+                
+//                if let ctx: String = dict["@odata.context"] as? String {
+//                    
+//                    searchResults.context = ctx
+//                }
+                
+                
+            }
+            
+        }
+        
+    }
+    
+    func performSearchForTopResult(searchText: String) {
+        
+        
         
     }
     
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
+    
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return searchResults.count
+
+//        if searchController.active {
+//            
+//            return suggestedSearchResults.count
+//            
+//        } else {
+//            
+//            return searchResults.count
+//        }
+        
+        return 1 // searchResults.value.count
+    
     }
 
     
@@ -148,18 +231,56 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating {
         let cell = tableView.dequeueReusableCellWithIdentifier("AZSResultCell", forIndexPath: indexPath) as? AZSResultCell ?? UITableViewCell()
 
         // Configure the cell...
+        
+        // cell.textLabel?.text = searchResults.value[indexPath.row]["name"]
 
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        //var cellResult = AZSResult()
+        
+//        if self.searchController.active {
+//            
+//            // change to suggestions var
+//            if let suggestion = self.searchResults.value[indexPath.row] as? AZSResult {
+//                
+//                print(suggestion)
+//                
+//            }
+//            
+//        } else {
+//            
+//            // Don't need cast here if using AZSResult as object type in array
+//            if let result = self.searchResults.value[indexPath.row] as? AZSResult {
+//                
+//                print(result)
+//                
+//            }
+//            
+//        }
+        
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if segue.identifier == "AZSDetailVC" {
+//            
+//            if let detailVC = segue.destinationViewController as? AZSDetailVC {
+//                
+//                if let azsresult = sender as? AZSResult {
+//                    
+//                    detailVC.result = azsresult
+//                    
+//                }
+//                
+//            }
+//            
+//        }
+//        
+//    }
 
 }

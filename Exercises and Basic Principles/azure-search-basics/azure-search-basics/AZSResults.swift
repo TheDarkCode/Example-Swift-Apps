@@ -10,30 +10,47 @@ import Foundation
 
 // Basic Structure
 // "@odata.context": String
-// "value": [AZResult]
+// "value": [Dictionary<String, AnyObject>]
 // "@odata.nextLink": String
 
-class AZSResults {
+struct AZSResults {
     
-    private var _context: String!
-    private var _value: [AnyObject]? // Default is AZResult but you could make any type of custom result class.
+    private var _context: String?
+    private var _value:[Dictionary<String, AnyObject>]?
     private var _nextLink: String?
+    
+    private var _results: AnyObject!
     
     var context: String {
         
         get {
          
-            return _context
+            return _context ?? String()
             
         }
         
     }
     
-    var value: [AnyObject] {
+//    var results: AnyObject {
+//        
+//        mutating get {
+//            
+//            if !isUniquelyReferencedNonObjC(&_results!) {
+//                
+//                _results = _results.copy()
+//                
+//            }
+//            
+//            return _results // as! [AZSResult]
+//        }
+//        
+//    }
+    
+    var value: [Dictionary<String, AnyObject>] {
         
         get {
             
-            if let results: [AnyObject] = _value ?? [AnyObject]() {
+            if let results: [Dictionary<String, AnyObject>] = _value ?? [Dictionary<String, AnyObject>]() {
                 
                 return results
                 
@@ -56,7 +73,49 @@ class AZSResults {
         
     }
     
+    init(results: AnyObject) {
+        
+        self.init()
+        
+        if let Results: AnyObject = results {
+            
+            self._results = Results
+            
+        }
+        
+        
+    }
+    
+    
+    init(context: String, results: [Dictionary<String, AnyObject>], nextLink: String) {
+        
+        self.init()
+        
+        if let ctx: String = context where ctx != "" {
+            
+            self._context = ctx
+            
+        }
+        
+        
+        if let values: [Dictionary<String, AnyObject>] = results where values.count > 0 {
+            
+            self._value = values
+            
+        }
+        
+        
+        if let nxtLink: String = nextLink where nxtLink != "" {
+            
+            self._nextLink = nxtLink
+            
+        }
+        
+    }
+    
     init() {
+        
+        self._results = [AZSResult]()
         
     }
     

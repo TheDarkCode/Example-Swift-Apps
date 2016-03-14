@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLEX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-azure-search-basics.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5537ED7C73782A4C2966B2034D1E114A</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>C6BCFA578853B96CD1F973418E86B5C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2BD922C256BB63BD7493110024A911F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

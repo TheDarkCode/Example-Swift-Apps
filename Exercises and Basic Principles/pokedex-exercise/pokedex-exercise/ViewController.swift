@@ -200,11 +200,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: - Collection View Configuration
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    
         return 1
+    
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    
         return CGSizeMake(105, 105)
+    
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

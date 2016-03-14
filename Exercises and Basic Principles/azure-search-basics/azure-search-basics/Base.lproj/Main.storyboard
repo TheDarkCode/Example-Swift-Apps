@@ -1,17 +1,161 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tmd-YQ-t42">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Search-->
-        <scene sceneID="ysj-oW-vJ3">
+        <!--Trail Search-->
+        <scene sceneID="uvd-w5-9jO">
             <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="k5R-bH-T5f" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iR5-1e-rGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController title="Trail Search" id="wj0-Ns-pg1" customClass="ViewController" customModule="azure_search_basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="S1H-pM-HcN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AZSResultCell" id="AZl-sy-xFS" customClass="AZSResultCell" customModule="azure_search_basics" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AZl-sy-xFS" id="0oH-j2-8JV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wj0-Ns-pg1" id="beJ-JM-efF"/>
+                            <outlet property="delegate" destination="wj0-Ns-pg1" id="NIe-kG-m2R"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Basic Trail Search" id="BML-lk-zF6"/>
+                    <connections>
+                        <segue destination="ueG-o3-iAJ" kind="show" identifier="TrailDetailVC" id="to7-vx-eAM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="804-ZL-TeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953.5" y="772"/>
+            <point key="canvasLocation" x="1031" y="-80"/>
+        </scene>
+        <!--Movie Search-->
+        <scene sceneID="1qz-zJ-VM9">
+            <objects>
+                <tableViewController id="YLT-kp-jca" customClass="AZSTableVC" customModule="azure_search_basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P4K-Zr-b2v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AZSResultCell" id="abw-GM-Hhz">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abw-GM-Hhz" id="xsa-Ch-har">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YLT-kp-jca" id="ZgF-P1-tdV"/>
+                            <outlet property="delegate" destination="YLT-kp-jca" id="PdL-MT-4uj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movie Search" id="fQb-fr-pvZ"/>
+                    <connections>
+                        <segue destination="Zc1-nr-mD8" kind="show" identifier="MovieDetailVC" id="EPx-ju-yFL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jv-OO-giH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="638"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JVX-qb-LHi">
+            <objects>
+                <navigationController id="lPO-TI-0cl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" badgeValue="Movies" systemItem="search" id="Pn5-3p-CpZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lCd-F8-FVR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YLT-kp-jca" kind="relationship" relationship="rootViewController" id="Wuf-AE-G5v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxM-5r-Hgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254" y="638"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZIW-ET-krf">
+            <objects>
+                <viewController id="ueG-o3-iAJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9WG-pS-eRn"/>
+                        <viewControllerLayoutGuide type="bottom" id="1VY-YS-ZAQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1W0-bN-Ju1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NiZ-rh-dxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704" y="-80"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gAA-XI-RjC">
+            <objects>
+                <viewController id="Zc1-nr-mD8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mGi-ww-Zv2"/>
+                        <viewControllerLayoutGuide type="bottom" id="3fs-Tq-Z4Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ZZ-t3-YK2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tv9-fh-xpP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704" y="638"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ThN-ae-ubP">
+            <objects>
+                <navigationController id="Tk3-7h-Tht" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" badgeValue="Trails" systemItem="search" id="LZP-Jr-wgO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MQF-Ki-uB1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wj0-Ns-pg1" kind="relationship" relationship="rootViewController" id="y9W-Ie-aCp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVJ-pR-g2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="-80"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Rqc-wl-B7u">
+            <objects>
+                <tabBarController id="Tmd-YQ-t42" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aY3-vE-HxG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Tk3-7h-Tht" kind="relationship" relationship="viewControllers" id="qQp-sh-rZo"/>
+                        <segue destination="lPO-TI-0cl" kind="relationship" relationship="viewControllers" id="MeG-yc-d0z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZi-fy-zSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="238"/>
         </scene>
     </scenes>
 </document>

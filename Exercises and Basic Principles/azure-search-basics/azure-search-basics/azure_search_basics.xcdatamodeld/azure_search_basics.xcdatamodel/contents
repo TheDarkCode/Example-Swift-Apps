@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="Entity" syncable="YES"/>
+    <entity name="Favorite" syncable="YES"/>
+    <entity name="Search" syncable="YES">
+        <attribute name="datetime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="selectedresult" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Favorite" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="Search" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Entity" positionX="-36" positionY="9" width="128" height="45"/>
+    </elements>
 </model>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4D70031C96B7F70007FC01 /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D70021C96B7F70007FC01 /* MovieResult.swift */; };
+		4D4D70051C96BC840007FC01 /* AZSSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D70041C96BC840007FC01 /* AZSSuggestion.swift */; };
+		4D8ABCE81C960388006E1D35 /* AZSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8ABCE71C960388006E1D35 /* AZSClient.swift */; };
 		4DB6AFDE1C91726F00278E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6AFDD1C91726F00278E09 /* AppDelegate.swift */; };
 		4DB6AFE01C91726F00278E09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6AFDF1C91726F00278E09 /* ViewController.swift */; };
 		4DB6AFE31C91726F00278E09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6AFE11C91726F00278E09 /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 
 /* Begin PBXFileReference section */
 		4C6D23C3F269D3AD0AFC2E62 /* Pods_azure_search_basics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_azure_search_basics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D4D70021C96B7F70007FC01 /* MovieResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieResult.swift; sourceTree = "<group>"; };
+		4D4D70041C96BC840007FC01 /* AZSSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZSSuggestion.swift; sourceTree = "<group>"; };
+		4D8ABCE71C960388006E1D35 /* AZSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZSClient.swift; sourceTree = "<group>"; };
 		4DB6AFDA1C91726F00278E09 /* azure-search-basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "azure-search-basics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB6AFDD1C91726F00278E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB6AFDF1C91726F00278E09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +132,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4D8ABCE61C960377006E1D35 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4D8ABCE71C960388006E1D35 /* AZSClient.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		4DB6AFD11C91726F00278E09 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +198,7 @@
 		4DB6B00E1C91727800278E09 /* Azure Search */ = {
 			isa = PBXGroup;
 			children = (
+				4D8ABCE61C960377006E1D35 /* Manager */,
 				4DB6B03E1C9180C300278E09 /* Models */,
 				4DFEB81B1C92BD03005C76B9 /* Views */,
 				4DFEB81C1C92BD09005C76B9 /* Controllers */,
@@ -200,6 +215,8 @@
 				4DB6B0121C91731A00278E09 /* AZSResult.swift */,
 				4DB6B0101C9172CB00278E09 /* AZSResults.swift */,
 				4DFEB82C1C92C743005C76B9 /* AZSMapAnnotation.swift */,
+				4D4D70021C96B7F70007FC01 /* MovieResult.swift */,
+				4D4D70041C96BC840007FC01 /* AZSSuggestion.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -441,11 +458,14 @@
 				4DB6AFE61C91726F00278E09 /* azure_search_basics.xcdatamodeld in Sources */,
 				4DFEB82F1C92CA1B005C76B9 /* AZSResultCell.swift in Sources */,
 				4DFEB81A1C92BCD3005C76B9 /* AZSMapVC.swift in Sources */,
+				4D8ABCE81C960388006E1D35 /* AZSClient.swift in Sources */,
 				4DFEB82D1C92C743005C76B9 /* AZSMapAnnotation.swift in Sources */,
 				4DFEB8281C92BFBD005C76B9 /* AZSDetailVC.swift in Sources */,
 				4DB6B0111C9172CB00278E09 /* AZSResults.swift in Sources */,
 				4DB6B0131C91731A00278E09 /* AZSResult.swift in Sources */,
+				4D4D70031C96B7F70007FC01 /* MovieResult.swift in Sources */,
 				4DB6AFDE1C91726F00278E09 /* AppDelegate.swift in Sources */,
+				4D4D70051C96BC840007FC01 /* AZSSuggestion.swift in Sources */,
 				4DB6B0151C9173C000278E09 /* AZLocation.swift in Sources */,
 				4DB6B0191C917AB400278E09 /* TrailResult.swift in Sources */,
 				4DB6B0431C91810900278E09 /* Constants.swift in Sources */,

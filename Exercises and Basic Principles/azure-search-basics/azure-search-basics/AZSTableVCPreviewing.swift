@@ -13,8 +13,6 @@ extension AZSTableVC: UIViewControllerPreviewingDelegate {
     
     // MARK: UIViewControllerPreviewingDelegate
     
-    
-    
     /// Create a previewing view controller to be shown at "Peek".
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
@@ -29,11 +27,29 @@ extension AZSTableVC: UIViewControllerPreviewingDelegate {
         
         guard let AZSDetailVC = storyboard?.instantiateViewControllerWithIdentifier("AZSDetailVC") as? AZSDetailVC else { return nil }
         
-        let previewDetail = searchResults[indexPath.row]
+//        var previewDetail: AnyObject!
+//        
+//        if searchController.active {
+//            
+//            if let result = self.suggestedSearchResults[indexPath.row] as? AZSResult {
+//                
+//                previewDetail = result
+//                
+//            }
+//            
+//        } else {
+//            
+//            if let result = self.searchResults[indexPath.row] {
+//                
+//                previewDetail = result
+//                
+//            }
+//
+//        }
         
         // Pass previewDetail to AZSDetailVC here
         
-        print(previewDetail)
+//        AZSDetailVC.result = previewDetail
         
         AZSDetailVC.preferredContentSize = CGSize(width: 0.0, height: 0.0) // Default height and width
         
@@ -44,7 +60,6 @@ extension AZSTableVC: UIViewControllerPreviewingDelegate {
         return AZSDetailVC
         
     }
-    
     
     
     /// Present the view controller for the "Pop" action.

@@ -24,7 +24,7 @@ extension ViewController: UIViewControllerPreviewingDelegate {
         
         var updatedLocation = location
         
-        updatedLocation.y -= 105.0
+        updatedLocation.y -= 116.0 // Account for cell height (from Storyboard)
         
         guard let indexPath = collectionView.indexPathForItemAtPoint(updatedLocation),
             
@@ -34,11 +34,29 @@ extension ViewController: UIViewControllerPreviewingDelegate {
         
         guard let PokemonDetailVC = storyboard?.instantiateViewControllerWithIdentifier("PokemonDetailVC") as? PokemonDetailVC else { return nil }
         
-        let pokemon = self.pokemon[indexPath.row]
+        var touchedPokemon: Pokemon!
+        
+        if searchActive {
+        
+            if let pokemon: Pokemon = self.filteredPokemon[indexPath.row] {
+                
+                touchedPokemon = pokemon
+                
+            }
+    
+        } else {
+            
+            if let pokemon: Pokemon = self.pokemon[indexPath.row] {
+                
+                touchedPokemon = pokemon
+                
+            }
+        
+        }
         
         // Pass previewDetail to PokemonDetailVC here
         
-        PokemonDetailVC.pokemon = pokemon
+        PokemonDetailVC.pokemon = touchedPokemon
         
         PokemonDetailVC.preferredContentSize = CGSize(width: 0.0, height: 0.0) // Default height and width
         

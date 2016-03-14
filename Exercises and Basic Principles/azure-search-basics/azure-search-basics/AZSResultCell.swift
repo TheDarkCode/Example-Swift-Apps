@@ -9,7 +9,7 @@
 import UIKit
 
 class AZSResultCell: UITableViewCell {
-
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
