@@ -9,6 +9,9 @@
 import UIKit
 
 class MovieResult: AZSResult {
+    
+    private var _title: String?
+    private var _imdbPictureUrl: String?
 
     convenience init(score: Double, id: String, title: String, imdbPictureUrl: String) {
         

@@ -22,7 +22,7 @@ class AZSSuggestion: NSObject {
     
     var title: String {
         
-        return title ?? String()
+        return _title ?? String()
     }
     
 }

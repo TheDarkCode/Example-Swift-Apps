@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AZSLocation: NSObject {
+struct AZSLocation {
     
     private var _type: String = "Point" // "Point"
     private var _coordinates: [Double]! // 0.0, 0.0
@@ -48,26 +48,20 @@ class AZSLocation: NSObject {
         
     }
     
-    convenience init(coords: [Double], crs: CRS) {
-        
-        self.init()
+    init(coords: [Double], crs: CRS) {
         
         self._coordinates = coords
         self._crs = crs
     
     }
     
-    convenience init(coords: [Double]) {
-        
-        self.init()
+    init(coords: [Double]) {
         
         self._coordinates = coords
         
     }
     
-    override init() {
-        
-        super.init()
+    init() {
         
         self._coordinates = [0.0,0.0]
         

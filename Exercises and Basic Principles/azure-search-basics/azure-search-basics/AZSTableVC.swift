@@ -166,6 +166,8 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDel
         
         view.endEditing(true)
         
+        self.tableView.reloadData()
+        
     }
     
     
@@ -184,6 +186,7 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDel
                 print(results.debugDescription)
                 
                 self.searchResults = AZSResults(results: results)
+                self.tableView.reloadData()
                 
 //                if let ctx: String = dict["@odata.context"] as? String {
 //                    
@@ -197,9 +200,15 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDel
         
     }
     
-    func performSearchForTopResult(searchText: String) {
+    func performSearchForTopResult(searchText: String) -> AZSResult {
         
+        // perform search
         
+        // set results to temporary var upon completion
+        
+        // grab ["value"][0] and return
+        
+        return AZSResult()
         
     }
     
@@ -222,17 +231,32 @@ class AZSTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDel
 //            return searchResults.count
 //        }
         
-        return 1 // searchResults.value.count
+        if let resultsCount: Int = searchResults?.results["value"]?.count ?? 0 {
+            
+            return resultsCount
+            
+        }
     
     }
 
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return 100.0
+        
+    }
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AZSResultCell", forIndexPath: indexPath) as? AZSResultCell ?? UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier("AZSResultCell", forIndexPath: indexPath) // as? AZSResultCell ?? UITableViewCell()
 
         // Configure the cell...
         
-        // cell.textLabel?.text = searchResults.value[indexPath.row]["name"]
+        if let resultName: AnyObject =  searchResults?.results["value"]?[indexPath.row]?["name"] as? String ?? String() {
+            
+            cell.textLabel?.text = "\(resultName)"
+            
+        }
 
         return cell
     }

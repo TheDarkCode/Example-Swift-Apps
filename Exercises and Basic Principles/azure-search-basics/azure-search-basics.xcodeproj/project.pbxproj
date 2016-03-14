@@ -140,6 +140,15 @@
 			name = Manager;
 			sourceTree = "<group>";
 		};
+		4D9AB7C51C97166A0057FFC3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6B0181C917AB400278E09 /* TrailResult.swift */,
+				4D4D70021C96B7F70007FC01 /* MovieResult.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		4DB6AFD11C91726F00278E09 = {
 			isa = PBXGroup;
 			children = (
@@ -165,9 +174,9 @@
 		4DB6AFDC1C91726F00278E09 /* azure-search-basics */ = {
 			isa = PBXGroup;
 			children = (
-				4DFEB8231C92BEE8005C76B9 /* Config */,
-				4DB6B0401C9180DA00278E09 /* Controllers */,
+				4D9AB7C51C97166A0057FFC3 /* Models */,
 				4DB6B03F1C9180CE00278E09 /* Views */,
+				4DB6B0401C9180DA00278E09 /* Controllers */,
 				4DB6B00E1C91727800278E09 /* Azure Search */,
 				4DB6AFDD1C91726F00278E09 /* AppDelegate.swift */,
 				4DB6AFE71C91726F00278E09 /* Assets.xcassets */,
@@ -198,6 +207,7 @@
 		4DB6B00E1C91727800278E09 /* Azure Search */ = {
 			isa = PBXGroup;
 			children = (
+				4DFEB8231C92BEE8005C76B9 /* Config */,
 				4D8ABCE61C960377006E1D35 /* Manager */,
 				4DB6B03E1C9180C300278E09 /* Models */,
 				4DFEB81B1C92BD03005C76B9 /* Views */,
@@ -209,13 +219,11 @@
 		4DB6B03E1C9180C300278E09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4DB6B0181C917AB400278E09 /* TrailResult.swift */,
 				4DB6B0141C9173C000278E09 /* AZLocation.swift */,
 				4DB6B0161C91759A00278E09 /* CRS.swift */,
 				4DB6B0121C91731A00278E09 /* AZSResult.swift */,
 				4DB6B0101C9172CB00278E09 /* AZSResults.swift */,
 				4DFEB82C1C92C743005C76B9 /* AZSMapAnnotation.swift */,
-				4D4D70021C96B7F70007FC01 /* MovieResult.swift */,
 				4D4D70041C96BC840007FC01 /* AZSSuggestion.swift */,
 			);
 			name = Models;

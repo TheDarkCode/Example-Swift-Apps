@@ -15,11 +15,47 @@ import Foundation
 
 struct AZSResults {
     
-    private var _context: String?
-    private var _value:[Dictionary<String, AnyObject>]?
-    private var _nextLink: String?
+    private var _context: String? // @odata.context
+    private var _value:[Dictionary<String, AnyObject>]? // value
+    private var _nextLink: String? // @odata.nextLink
     
-    private var _results: AnyObject!
+    // Raw Results from API
+    private var _results: Dictionary<String, AnyObject>!
+    
+    
+    // MARK: - Downloaded Results
+    
+    //    var results: AnyObject {
+    //
+    //        mutating get {
+    //
+    //            if !isUniquelyReferencedNonObjC(&_results!) {
+    //
+    //                _results = _results.copy()
+    //
+    //            }
+    //
+    //            return _results // as! [AZSResult]
+    //        }
+    //
+    //    }
+    
+    var results: Dictionary<String, AnyObject> {
+        
+        get {
+            
+            return _results
+            
+        }
+        
+        set {
+            
+            _results = newValue
+        }
+        
+    }
+    
+    // MARK: - Properties of Downloaded Results
     
     var context: String {
         
@@ -30,21 +66,6 @@ struct AZSResults {
         }
         
     }
-    
-//    var results: AnyObject {
-//        
-//        mutating get {
-//            
-//            if !isUniquelyReferencedNonObjC(&_results!) {
-//                
-//                _results = _results.copy()
-//                
-//            }
-//            
-//            return _results // as! [AZSResult]
-//        }
-//        
-//    }
     
     var value: [Dictionary<String, AnyObject>] {
         
@@ -73,11 +94,13 @@ struct AZSResults {
         
     }
     
-    init(results: AnyObject) {
+    // MARK: - Initialize with results download from API.
+    
+    init(results: Dictionary<String, AnyObject>) {
         
         self.init()
         
-        if let Results: AnyObject = results {
+        if let Results: Dictionary<String, AnyObject> = results {
             
             self._results = Results
             
@@ -86,6 +109,8 @@ struct AZSResults {
         
     }
     
+    
+    // MARK: - Initialize with already parsed results download from API.
     
     init(context: String, results: [Dictionary<String, AnyObject>], nextLink: String) {
         
@@ -115,7 +140,7 @@ struct AZSResults {
     
     init() {
         
-        self._results = [AZSResult]()
+        self._results = Dictionary<String,AnyObject>()
         
     }
     

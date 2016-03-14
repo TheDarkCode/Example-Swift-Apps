@@ -10,7 +10,21 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKe-28-A3m">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DKe-28-A3m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Cul-2d-TeJ"/>
+                <constraint firstAttribute="bottom" secondItem="DKe-28-A3m" secondAttribute="bottom" id="Roj-zB-nOZ"/>
+                <constraint firstAttribute="trailing" secondItem="DKe-28-A3m" secondAttribute="trailing" id="fPi-Sr-CpH"/>
+                <constraint firstItem="DKe-28-A3m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="y2G-Wh-wz5"/>
+            </constraints>
         </view>
     </objects>
 </document>
