@@ -11,6 +11,23 @@ Completed examples will include reusable classes for UI components (sound, anima
 
 You should have a working understanding of basic variables, arrays, loops, and so forth. If not, consult the playground files that have been added to help assist you in quickly getting up to speed. Each app will be increasingly more complex. Some samples will be posted onto the App Store for trial on your personal device.
 
+####Azure Service Information for Optional Backend Deployments
+
+######If you are new to Azure, you can get a free trial at the following link: 
+https://azure.microsoft.com/en-us/pricing/free-trial/
+
+######Data Transfers Pricing Details
+https://azure.microsoft.com/en-us/pricing/details/data-transfers/
+
+##Related Projects:
+
+###Example Swift Apps by Mark Hamilton, Dryverless
+Collection of example applications written in Swift / Objective-C for iOS 9.x (developed under 9.2.1 SDK - will be migrated to 9.3 when released)
+######https://github.com/TheDarkCode/Example-Swift-Apps
+
+###AngularAzureSearch by Mark Hamilton, Dryverless
+######https://github.com/TheDarkCode/AngularAzureSearch/
+
 ##Support:
 
 #####Send any questions or requests to: support@dryverless.com
