@@ -21,9 +21,9 @@ https://azure.microsoft.com/en-us/pricing/details/data-transfers/
 
 ##Related Projects:
 
-###Example Swift Apps by Mark Hamilton, Dryverless
-Collection of example applications written in Swift / Objective-C for iOS 9.x (developed under 9.2.1 SDK - will be migrated to 9.3 when released)
-######https://github.com/TheDarkCode/Example-Swift-Apps
+###azure-search-ios by Mark Hamilton, Dryverless
+Modular SDK written in Swift 2 that simplifies incorporating Azure Search into native iOS applications for iPhones and iPads. Requires Whole Module Optimization to be enabled for best performance. Non-commercial use only.
+######https://github.com/TheDarkCode/azure-search-ios
 
 ###AngularAzureSearch by Mark Hamilton, Dryverless
 ######https://github.com/TheDarkCode/AngularAzureSearch/
