@@ -30,11 +30,9 @@ Modular SDK written in Swift 2 that simplifies incorporating Azure Search into n
 
 ##iOS 9 Developer Courses from Devslopes:
 
-###iOS 9 and Swift 2: From Beginner to Paid Professional
-https://www.udemy.com/ios9-swift/?couponCode=COMMUNITY
+####[iOS 9 and Swift 2: From Beginner to Paid Professional](https://www.udemy.com/ios9-swift/?couponCode=COMMUNITY)
 
-###Intermediate iOS - Get Job Ready with Swift 2
-https://www.udemy.com/intermediate-ios/?couponCode=COMMUNITY
+####[Intermediate iOS - Get Job Ready with Swift 2](https://www.udemy.com/intermediate-ios/?couponCode=COMMUNITY)
 
 ##Support:
 
