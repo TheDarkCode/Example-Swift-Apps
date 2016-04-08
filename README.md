@@ -21,6 +21,18 @@ https://azure.microsoft.com/en-us/pricing/details/data-transfers/
 
 ##Related Projects:
 
+##Extensions by Mark Hamilton, Dryverless
+Cocoapod of useful extensions written in Swift 2.2.
+######https://github.com/TheDarkCode/Extensions
+
+##SoundEffect by Mark Hamilton, Dryverless
+Sample class for quickly incorporating sound effects in iOS, OS X and tvOS apps.
+######https://github.com/TheDarkCode/SoundEffect
+
+##SwiftyLevenshtein by Mark Hamilton, Dryverless
+Levenshtein distance algorithm written in Swift 2.2. Both a slow and highly optimized version are included.
+######https://github.com/TheDarkCode/SwiftyLevenshtein
+
 ###azure-search-ios by Mark Hamilton, Dryverless
 Modular SDK written in Swift 2 that simplifies incorporating Azure Search into native iOS applications for iPhones and iPads. Requires Whole Module Optimization to be enabled for best performance. Non-commercial use only.
 ######https://github.com/TheDarkCode/azure-search-ios
