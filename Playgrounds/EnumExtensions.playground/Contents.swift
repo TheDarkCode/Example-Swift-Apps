@@ -69,7 +69,7 @@ public extension Int {
         
     }
     
-        mutating func postfix(increment: Int) -> Int {
+    mutating func postfix(increment: Int) -> Int {
         
         defer {
             
