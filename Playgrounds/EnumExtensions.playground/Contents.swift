@@ -69,6 +69,30 @@ public extension Int {
         
     }
     
+        mutating func postfix(increment: Int) -> Int {
+        
+        defer {
+            
+            self += increment
+            
+        }
+        
+        return self
+        
+    }
+    
+    mutating func postfixIncrement() -> Int {
+        
+        defer {
+            
+            self += 1
+            
+        }
+        
+        return self
+        
+    }
+    
 }
 
 // Defer inside AnyGenerator
